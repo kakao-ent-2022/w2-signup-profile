@@ -9,5 +9,4 @@ import Foundation
 
 protocol ProfileDataDelegate {
     func updateProfile(name: String, description: String)
-    
 }
