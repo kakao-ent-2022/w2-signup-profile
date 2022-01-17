@@ -10,6 +10,7 @@ import UIKit
 class EditViewController: UIViewController {
     var nameText : String?
     var descriptionText : String?
+    var profileDataDelegate: ProfileDataDelegate?
     
     @IBOutlet weak var nameTextField: UITextField!
     @IBOutlet weak var descriptionTextField: UITextField!
@@ -29,6 +30,15 @@ class EditViewController: UIViewController {
     @IBAction func close(_ sender: Any) {
         dismiss(animated: true, completion: nil)
     }
+    
+    @IBAction func doneButtonTouched(_ sender: Any) {
+        let name = nameTextField.text ?? ""
+        let description = descriptionTextField.text ?? ""
+        profileDataDelegate?.updateProfile(name: name, description: description)
+        dismiss(animated: true, completion: nil)
+    }
+    
+    
     
 
 }

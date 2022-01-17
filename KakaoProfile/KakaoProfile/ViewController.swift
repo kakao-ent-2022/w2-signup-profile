@@ -7,7 +7,8 @@
 
 import UIKit
 
-class ViewController: UIViewController {
+class ViewController: UIViewController, ProfileDataDelegate {
+    
     @IBOutlet weak var profileImage: UIImageView!
     
     @IBOutlet weak var nameLabel: UILabel!
@@ -32,8 +33,13 @@ class ViewController: UIViewController {
         if let destination = segue.destination as? EditViewController {
             destination.nameText = self.nameLabel.text
             destination.descriptionText = self.descriptionLabel.text
+            destination.profileDataDelegate = self
         }
     }
     
+    func updateProfile(name: String, description: String) {
+        self.nameLabel.text = name
+        self.descriptionLabel.text = description
+    }
 }
 
