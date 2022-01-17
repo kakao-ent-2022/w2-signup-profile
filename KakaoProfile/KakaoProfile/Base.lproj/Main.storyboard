@@ -27,7 +27,7 @@
         <!--Item 1-->
         <scene sceneID="dB5-g6-GsK">
             <objects>
-                <viewController id="lYi-ud-O0G" sceneMemberID="viewController">
+                <viewController id="lYi-ud-O0G" customClass="ViewController" customModule="KakaoProfile" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="huT-Pj-QwC">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
