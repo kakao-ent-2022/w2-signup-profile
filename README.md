@@ -8,3 +8,4 @@ Edit 버튼 클릭 시 Label의 backgroundColor, textColor, alpha, text content�
 - 버튼에 IBAction을 추가할 때의 이벤트 종류 https://developer.apple.com/documentation/uikit/uicontrol/event
 - 버튼이 여러개일 때 하나의 액션에 추가할 수 있을까? 가능하다.
 - 버튼 하나에 여러개의 액션을 추가할 수 있을까? 가능하다.
+

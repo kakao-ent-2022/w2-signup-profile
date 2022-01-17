@@ -7,7 +7,7 @@
 
 import UIKit
 
-class Item2ViewCoontroller: UIViewController {
+class Item2ViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
