@@ -8,24 +8,27 @@
 import UIKit
 
 class EditViewController: UIViewController {
-
+    var nameText : String?
+    var descriptionText : String?
+    
+    @IBOutlet weak var nameTextField: UITextField!
+    @IBOutlet weak var descriptionTextField: UITextField!
     @IBOutlet weak var imageEditButton: UIButton!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
         imageEditButton.layer.cornerRadius = 0.5 * imageEditButton.bounds.size.width
+        updateUI()
     }
     
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
+    func updateUI() {
+        nameTextField.text = nameText ?? ""
+        descriptionTextField.text = descriptionText ?? ""
     }
-    */
+    
+    @IBAction func close(_ sender: Any) {
+        dismiss(animated: true, completion: nil)
+    }
+    
 
 }

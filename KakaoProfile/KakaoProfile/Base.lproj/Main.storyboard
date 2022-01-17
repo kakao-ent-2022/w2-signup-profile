@@ -102,6 +102,9 @@
                                         <buttonConfiguration key="configuration" style="plain" title="Cancel">
                                             <fontDescription key="titleFontDescription" style="UICTFontTextStyleTitle3"/>
                                         </buttonConfiguration>
+                                        <connections>
+                                            <action selector="close:" destination="VeV-L9-9ql" eventType="touchUpInside" id="hfm-ly-8Kt"/>
+                                        </connections>
                                     </button>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="프로필" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ygL-lp-PxY">
                                         <rect key="frame" x="155.5" y="2.5" width="65" height="30"/>
@@ -169,7 +172,9 @@
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="descriptionTextField" destination="7LN-uN-zNd" id="uOZ-G2-Bue"/>
                         <outlet property="imageEditButton" destination="bUr-FG-chi" id="nRk-6w-lCr"/>
+                        <outlet property="nameTextField" destination="y9k-Hb-0Po" id="egc-RX-zZW"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="rPY-bE-CoC" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>

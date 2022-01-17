@@ -28,5 +28,12 @@ class ViewController: UIViewController {
         self.descriptionLabel.text = "크루미션"
     }
     
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if let destination = segue.destination as? EditViewController {
+            destination.nameText = self.nameLabel.text
+            destination.descriptionText = self.descriptionLabel.text
+        }
+    }
+    
 }
 
