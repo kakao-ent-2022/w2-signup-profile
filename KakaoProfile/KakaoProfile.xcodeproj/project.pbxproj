@@ -16,7 +16,7 @@
 		5EAE05CC279530A200402029 /* KakaoProfileTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5EAE05CB279530A200402029 /* KakaoProfileTests.swift */; };
 		5EAE05D6279530A200402029 /* KakaoProfileUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5EAE05D5279530A200402029 /* KakaoProfileUITests.swift */; };
 		5EAE05D8279530A200402029 /* KakaoProfileUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5EAE05D7279530A200402029 /* KakaoProfileUITestsLaunchTests.swift */; };
-		5EAE05E52795398600402029 /* ImageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5EAE05E42795398600402029 /* ImageViewController.swift */; };
+		5EAE05E52795398600402029 /* Item2ViewCoontroller.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5EAE05E42795398600402029 /* Item2ViewCoontroller.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -50,7 +50,7 @@
 		5EAE05D1279530A200402029 /* KakaoProfileUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = KakaoProfileUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		5EAE05D5279530A200402029 /* KakaoProfileUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KakaoProfileUITests.swift; sourceTree = "<group>"; };
 		5EAE05D7279530A200402029 /* KakaoProfileUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KakaoProfileUITestsLaunchTests.swift; sourceTree = "<group>"; };
-		5EAE05E42795398600402029 /* ImageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageViewController.swift; sourceTree = "<group>"; };
+		5EAE05E42795398600402029 /* Item2ViewCoontroller.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Item2ViewCoontroller.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -108,7 +108,7 @@
 				5EAE05BD279530A200402029 /* Assets.xcassets */,
 				5EAE05BF279530A200402029 /* LaunchScreen.storyboard */,
 				5EAE05C2279530A200402029 /* Info.plist */,
-				5EAE05E42795398600402029 /* ImageViewController.swift */,
+				5EAE05E42795398600402029 /* Item2ViewCoontroller.swift */,
 			);
 			path = KakaoProfile;
 			sourceTree = "<group>";
@@ -263,7 +263,7 @@
 			files = (
 				5EAE05B9279530A100402029 /* ViewController.swift in Sources */,
 				5EAE05B5279530A100402029 /* AppDelegate.swift in Sources */,
-				5EAE05E52795398600402029 /* ImageViewController.swift in Sources */,
+				5EAE05E52795398600402029 /* Item2ViewCoontroller.swift in Sources */,
 				5EAE05B7279530A100402029 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
