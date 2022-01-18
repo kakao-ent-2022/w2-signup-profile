@@ -13,6 +13,7 @@
 		EA346D2327965107005DF686 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EA346D2127965107005DF686 /* Main.storyboard */; };
 		EA346D2527965108005DF686 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EA346D2427965108005DF686 /* Assets.xcassets */; };
 		EA346D2827965108005DF686 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EA346D2627965108005DF686 /* LaunchScreen.storyboard */; };
+		EA346D3027968FFD005DF686 /* EditViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA346D2F27968FFD005DF686 /* EditViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +25,7 @@
 		EA346D2427965108005DF686 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		EA346D2727965108005DF686 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		EA346D2927965108005DF686 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		EA346D2F27968FFD005DF686 /* EditViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -59,6 +61,7 @@
 				EA346D1B27965107005DF686 /* AppDelegate.swift */,
 				EA346D1D27965107005DF686 /* SceneDelegate.swift */,
 				EA346D1F27965107005DF686 /* ProfileViewController.swift */,
+				EA346D2F27968FFD005DF686 /* EditViewController.swift */,
 				EA346D2127965107005DF686 /* Main.storyboard */,
 				EA346D2427965108005DF686 /* Assets.xcassets */,
 				EA346D2627965108005DF686 /* LaunchScreen.storyboard */,
@@ -138,6 +141,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EA346D3027968FFD005DF686 /* EditViewController.swift in Sources */,
 				EA346D2027965107005DF686 /* ProfileViewController.swift in Sources */,
 				EA346D1C27965107005DF686 /* AppDelegate.swift in Sources */,
 				EA346D1E27965107005DF686 /* SceneDelegate.swift in Sources */,

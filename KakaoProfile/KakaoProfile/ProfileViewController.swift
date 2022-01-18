@@ -25,10 +25,10 @@ class ProfileViewController: UIViewController {
         
         print(#file, #line, #function, #column)
         
-        self.setLabel()
+        self.initUI()
     }
 
-    fileprivate func setLabel() {
+    fileprivate func initUI() {
         self.nameLabel.text = "River"
         self.descriptionLabel.text = "카르페 디엠"
         
@@ -45,5 +45,11 @@ class ProfileViewController: UIViewController {
         self.descriptionLabel.center.x = self.view.frame.width / 2
     }
     
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if let destination = segue.destination as? EditViewController {
+            destination.nameText = self.nameLabel.text ?? ""
+            destination.descriptionText = self.descriptionLabel.text ?? "" 
+        }
+    }
 }
 
