@@ -75,7 +75,7 @@
         <!--뉴스-->
         <scene sceneID="L7m-CY-mUj">
             <objects>
-                <viewController id="RPt-DJ-09w" sceneMemberID="viewController">
+                <viewController id="RPt-DJ-09w" customClass="MainViewController" customModule="KakaoProfile" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="F05-C0-sAb">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
