@@ -18,9 +18,10 @@ class Profile {
     var name: String
     var description: String
     
-    init(name: String, description: String) {
+    init(name: String, description: String, image: UIImage? = nil) {
         self.name = name
         self.description = description
+        self.image = image
     }
     
     weak var delegate: ProfileDelegate?

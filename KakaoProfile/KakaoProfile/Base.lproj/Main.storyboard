@@ -20,14 +20,14 @@
                     </tabBar>
                     <connections>
                         <segue destination="BYZ-38-t0r" kind="relationship" relationship="viewControllers" id="Bkh-v6-LQS"/>
-                        <segue destination="xZD-iJ-d3c" kind="relationship" relationship="viewControllers" id="IXt-6c-BS3"/>
+                        <segue destination="eJN-PY-TWi" kind="relationship" relationship="viewControllers" id="IXt-6c-BS3"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="0Xl-O7-JVf" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="28.985507246376812" y="69.642857142857139"/>
         </scene>
-        <!--Item2-->
+        <!--Item2 View Controller-->
         <scene sceneID="G8q-qK-Jc6">
             <objects>
                 <viewController id="xZD-iJ-d3c" customClass="Item2ViewController" customModule="KakaoProfile" customModuleProvider="target" sceneMemberID="viewController">
@@ -37,11 +37,11 @@
                         <viewLayoutGuide key="safeArea" id="PK8-rp-u2H"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Item2" id="L81-nn-U1b"/>
+                    <navigationItem key="navigationItem" id="y9h-qH-cPP"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="q2s-Tu-QRg" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1041" y="372"/>
+            <point key="canvasLocation" x="1950.7246376811595" y="371.65178571428572"/>
         </scene>
         <!--Item1-->
         <scene sceneID="tne-QT-ifu">
@@ -164,6 +164,9 @@
                                 <buttonConfiguration key="configuration" style="plain" title="" cornerStyle="capsule">
                                     <backgroundConfiguration key="background" image="multiply.circle.fill" catalog="system"/>
                                 </buttonConfiguration>
+                                <connections>
+                                    <action selector="clearNameButtonTouched:" destination="xp2-Vz-2nN" eventType="touchUpInside" id="75h-89-c9z"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="DEI-U6-5jg">
                                 <rect key="frame" x="305" y="615" width="21" height="21"/>
@@ -172,6 +175,9 @@
                                 <buttonConfiguration key="configuration" style="plain" title="" cornerStyle="capsule">
                                     <backgroundConfiguration key="background" image="multiply.circle.fill" catalog="system"/>
                                 </buttonConfiguration>
+                                <connections>
+                                    <action selector="clearDescriptionButtonTouched:" destination="xp2-Vz-2nN" eventType="touchUpInside" id="uf5-vX-AAK"/>
+                                </connections>
                             </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="qSs-Gs-lWz"/>
@@ -187,6 +193,25 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="W6E-vZ-ckE" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1808.6956521739132" y="-455.35714285714283"/>
+        </scene>
+        <!--Item2-->
+        <scene sceneID="seZ-UN-4uG">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="eJN-PY-TWi" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Item2" id="L81-nn-U1b"/>
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="hPm-So-n7i">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="xZD-iJ-d3c" kind="relationship" relationship="rootViewController" id="FAs-8J-DWY"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Euu-SB-Yx7" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1040.5797101449275" y="371.65178571428572"/>
         </scene>
     </scenes>
     <resources>

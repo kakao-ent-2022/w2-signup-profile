@@ -38,7 +38,7 @@ class ViewController: UIViewController, ProfileDelegate {
     
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        let profile = Profile(name: self.nameLabel.text ?? "", description: self.descriptionLabel.text ?? "" )
+        let profile = Profile(name: self.nameLabel.text ?? "", description: self.descriptionLabel.text ?? "", image: self.profileImage.image )
         profile.delegate = self
         if let destination = segue.destination as? EditViewController {
             destination.profile = profile

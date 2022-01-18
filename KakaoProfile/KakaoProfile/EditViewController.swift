@@ -18,6 +18,8 @@ class EditViewController: UIViewController, PHPickerViewControllerDelegate {
     override func viewDidLoad() {
         super.viewDidLoad()
         profileImage?.layer.cornerRadius = (profileImage?.frame.size.width ?? 0.0) / 3
+        
+        profileImage.image = profile?.image
         nameTextField.text = profile?.name
         descriptionTextField.text = profile?.description
     }
@@ -38,6 +40,12 @@ class EditViewController: UIViewController, PHPickerViewControllerDelegate {
     @IBAction func doneButtonTouched(_ sender: UIButton) {
         profile?.confirmNewProfile(name: nameTextField.text, description: descriptionTextField.text, image: nil )
         dismiss(animated: true, completion: nil)
+    }
+    @IBAction func clearNameButtonTouched(_ sender: UIButton) {
+        nameTextField.text = ""
+    }
+    @IBAction func clearDescriptionButtonTouched(_ sender: UIButton) {
+        descriptionTextField.text = ""
     }
     
     
