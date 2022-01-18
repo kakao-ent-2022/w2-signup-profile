@@ -13,6 +13,9 @@
 		2EB2FD392795551800A421FC /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2EB2FD372795551800A421FC /* Main.storyboard */; };
 		2EB2FD3B2795551800A421FC /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2EB2FD3A2795551800A421FC /* Assets.xcassets */; };
 		2EB2FD3E2795551800A421FC /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2EB2FD3C2795551800A421FC /* LaunchScreen.storyboard */; };
+		2EF6BBFF27966374000E78DA /* EditViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2EF6BBFE27966374000E78DA /* EditViewController.swift */; };
+		2EF6BC0127968E76000E78DA /* good_lion.png in Resources */ = {isa = PBXBuildFile; fileRef = 2EF6BC0027968E76000E78DA /* good_lion.png */; };
+		2EF6BC032796A405000E78DA /* EditProfileDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2EF6BC022796A405000E78DA /* EditProfileDelegate.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +27,9 @@
 		2EB2FD3A2795551800A421FC /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		2EB2FD3D2795551800A421FC /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		2EB2FD3F2795551800A421FC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		2EF6BBFE27966374000E78DA /* EditViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditViewController.swift; sourceTree = "<group>"; };
+		2EF6BC0027968E76000E78DA /* good_lion.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = good_lion.png; sourceTree = "<group>"; };
+		2EF6BC022796A405000E78DA /* EditProfileDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditProfileDelegate.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,13 +62,16 @@
 		2EB2FD302795551700A421FC /* KakaoProfile */ = {
 			isa = PBXGroup;
 			children = (
+				2EF6BC0027968E76000E78DA /* good_lion.png */,
 				2EB2FD312795551700A421FC /* AppDelegate.swift */,
 				2EB2FD332795551700A421FC /* SceneDelegate.swift */,
 				2EB2FD352795551800A421FC /* ViewController.swift */,
 				2EB2FD372795551800A421FC /* Main.storyboard */,
+				2EF6BBFE27966374000E78DA /* EditViewController.swift */,
 				2EB2FD3A2795551800A421FC /* Assets.xcassets */,
 				2EB2FD3C2795551800A421FC /* LaunchScreen.storyboard */,
 				2EB2FD3F2795551800A421FC /* Info.plist */,
+				2EF6BC022796A405000E78DA /* EditProfileDelegate.swift */,
 			);
 			path = KakaoProfile;
 			sourceTree = "<group>";
@@ -127,6 +136,7 @@
 			files = (
 				2EB2FD3E2795551800A421FC /* LaunchScreen.storyboard in Resources */,
 				2EB2FD3B2795551800A421FC /* Assets.xcassets in Resources */,
+				2EF6BC0127968E76000E78DA /* good_lion.png in Resources */,
 				2EB2FD392795551800A421FC /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -138,7 +148,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2EF6BBFF27966374000E78DA /* EditViewController.swift in Sources */,
 				2EB2FD362795551800A421FC /* ViewController.swift in Sources */,
+				2EF6BC032796A405000E78DA /* EditProfileDelegate.swift in Sources */,
 				2EB2FD322795551700A421FC /* AppDelegate.swift in Sources */,
 				2EB2FD342795551700A421FC /* SceneDelegate.swift in Sources */,
 			);
@@ -289,6 +301,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = G49TCMH6D2;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = KakaoProfile/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
@@ -316,6 +329,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = G49TCMH6D2;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = KakaoProfile/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;

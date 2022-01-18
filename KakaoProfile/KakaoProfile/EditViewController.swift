@@ -18,7 +18,7 @@ class EditViewController: UIViewController, UIImagePickerControllerDelegate,  UI
     
     private let imagePickerController = UIImagePickerController()
     
-    var delegate: EditViewDelegate?
+    var delegate: EditProfileDelegate?
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -59,10 +59,9 @@ class EditViewController: UIViewController, UIImagePickerControllerDelegate,  UI
     
     @IBAction func selectImageButtonTouched(_ sender: UIButton) {
         let isImageSelectionAvailable = UIImagePickerController.isSourceTypeAvailable(.savedPhotosAlbum)
-        print("isImageSelectionAvailable: \(isImageSelectionAvailable)")
-        
+        if !isImageSelectionAvailable { return }
+    
         let availableMediaTypes =  UIImagePickerController.availableMediaTypes(for: .savedPhotosAlbum)
-        
         
         imagePickerController.mediaTypes = availableMediaTypes ?? []
         imagePickerController.delegate = self
@@ -72,7 +71,6 @@ class EditViewController: UIViewController, UIImagePickerControllerDelegate,  UI
     func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey : Any]) {
         let originImage = info[.originalImage] as? UIImage
         profileImageView.image = originImage
-        picker.dismiss(animated: true, completion: nil)
     }
     
     @IBAction func doneButtonTouched(_ sender: Any) {
