@@ -18,3 +18,6 @@ Edit 버튼 클릭 시 Label의 backgroundColor, textColor, alpha, text content�
 - (open) → viewDidLoad → viewWillAppear → viewDidAppear → (cancel) → viewWillDisappear → viewDidDisappear
 - IBAction과 Segue 중 IBAction이 먼저 작동하고, Segue가 작동한다.
 - type of segue : https://stackoverflow.com/questions/25966215/whats-the-difference-between-all-the-selection-segues
+
+## 시스템-ViewController
+<img src="https://s3-us-west-2.amazonaws.com/secure.notion-static.com/627cac88-b1ef-4a81-a409-877830f0eb7e/Untitled.png" width=50%><img src="https://s3-us-west-2.amazonaws.com/secure.notion-static.com/204a5140-9d4f-4b39-bb6e-9aa56cacba63/Untitled.png" width=50%><img src = "https://s3-us-west-2.amazonaws.com/secure.notion-static.com/0514d831-db48-4a4a-a9ff-15d9956489bd/Untitled.png" width=50%><img src="https://s3-us-west-2.amazonaws.com/secure.notion-static.com/5eb1b0ba-eb29-4b98-897b-0e8b6e494440/Untitled.png" width=50%>

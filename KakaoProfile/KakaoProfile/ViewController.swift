@@ -7,7 +7,8 @@
 
 import UIKit
 
-class ViewController: UIViewController {
+class ViewController: UIViewController, ProfileDelegate {
+    
     @IBOutlet var profileImage: UIImageView!
     @IBOutlet var nameLabel: UILabel!
     @IBOutlet var descriptionLabel: UILabel!
@@ -27,8 +28,23 @@ class ViewController: UIViewController {
         self.descriptionLabel.textColor = UIColor.blue
         self.nameLabel.alpha = 0.7
         
-    
     }
+    
+    func profileDidSet(_ profile: Profile) {
+        self.nameLabel.text = profile.name
+        self.descriptionLabel.text = profile.description
+        self.profileImage.image = profile.image
+    }
+    
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        let profile = Profile(name: self.nameLabel.text ?? "", description: self.descriptionLabel.text ?? "" )
+        profile.delegate = self
+        if let destination = segue.destination as? EditViewController {
+            destination.profile = profile
+                }
+    }
+    
     
     @IBAction func editButtonTouched(_ sender: UIButton) {
         self.nameLabel.textColor = UIColor.blue
@@ -36,7 +52,6 @@ class ViewController: UIViewController {
         self.nameLabel.alpha = 0.5
         self.descriptionLabel.text = "크루미션"
     }
-    
 
 }
 

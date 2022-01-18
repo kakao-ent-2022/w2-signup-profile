@@ -124,6 +124,9 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="plain" title="Done"/>
+                                <connections>
+                                    <action selector="doneButtonTouched:" destination="xp2-Vz-2nN" eventType="touchUpInside" id="lhZ-KB-LdA"/>
+                                </connections>
                             </button>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="koa-ZR-1Gu">
                                 <rect key="frame" x="120" y="352" width="150" height="150"/>
@@ -176,6 +179,8 @@
                     </view>
                     <navigationItem key="navigationItem" id="tek-hJ-PhE"/>
                     <connections>
+                        <outlet property="descriptionTextField" destination="LeV-Lt-xhi" id="vDk-wK-6mv"/>
+                        <outlet property="nameTextField" destination="pdR-iS-67n" id="VHa-YP-rcc"/>
                         <outlet property="profileImage" destination="koa-ZR-1Gu" id="0Rg-ry-m3i"/>
                     </connections>
                 </viewController>

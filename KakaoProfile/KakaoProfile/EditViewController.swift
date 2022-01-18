@@ -11,12 +11,15 @@ import PhotosUI
 class EditViewController: UIViewController, PHPickerViewControllerDelegate {
     
     @IBOutlet var profileImage: UIImageView!
-    
+    @IBOutlet var nameTextField: UITextField!
+    @IBOutlet var descriptionTextField: UITextField!
+    var profile: Profile?
     
     override func viewDidLoad() {
         super.viewDidLoad()
         profileImage?.layer.cornerRadius = (profileImage?.frame.size.width ?? 0.0) / 3
-
+        nameTextField.text = profile?.name
+        descriptionTextField.text = profile?.description
     }
     
     @IBAction func selectImageButtonTouched(_ sender: UIButton) {
@@ -27,21 +30,13 @@ class EditViewController: UIViewController, PHPickerViewControllerDelegate {
         }
     }
     
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
-    }
-    */
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-          
-    }
-    
     
     @IBAction func cancelButtonTouched(_ sender: UIButton) {
+        dismiss(animated: true, completion: nil)
+    }
+    
+    @IBAction func doneButtonTouched(_ sender: UIButton) {
+        profile?.confirmNewProfile(name: nameTextField.text, description: descriptionTextField.text, image: nil )
         dismiss(animated: true, completion: nil)
     }
     
@@ -64,6 +59,7 @@ class EditViewController: UIViewController, PHPickerViewControllerDelegate {
     func handleCompletion(assetIdentifier: String, object: Any?, error: Error? = nil) {
         if let image = object as? UIImage {
             profileImage.image = image
+            profile?.image = image
 
         } else if let error = error {
             print("Couldn't display \(assetIdentifier) with error: \(error)")
