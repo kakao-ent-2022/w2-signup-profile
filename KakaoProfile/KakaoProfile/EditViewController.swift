@@ -12,6 +12,7 @@ class EditViewController: UIViewController {
     var descriptionText : String?
     var profileDataDelegate: ProfileDataDelegate?
     
+    @IBOutlet weak var profileImage: UIImageView!
     @IBOutlet weak var nameTextField: UITextField!
     @IBOutlet weak var descriptionTextField: UITextField!
     @IBOutlet weak var imageEditButton: UIButton!
@@ -57,4 +58,29 @@ class EditViewController: UIViewController {
         print(#file, #line, #function, #column)
     }
 
+    @IBAction func selectImageButtonTouched(_ sender: Any) {
+        let imagePicker = UIImagePickerController()
+        if UIImagePickerController.isSourceTypeAvailable(.savedPhotosAlbum) {
+            imagePicker.delegate = self
+            imagePicker.sourceType = .savedPhotosAlbum
+            imagePicker.allowsEditing = false
+            present(imagePicker, animated: true, completion: nil)
+        }
+    }
 }
+
+extension EditViewController: UIImagePickerControllerDelegate, UINavigationControllerDelegate {
+    
+    func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey : Any]) {
+        guard let image = info[.originalImage] as? UIImage else { return }
+        guard let data = image.jpegData(compressionQuality: 0.1) else { return }
+        self.profileImage.image = UIImage(data: data)
+        dismiss(animated: true)
+    }
+    
+    func imagePickerControllerDidCancel(_ picker: UIImagePickerController) {
+        picker.dismiss(animated: true)
+    }
+    
+}
+
