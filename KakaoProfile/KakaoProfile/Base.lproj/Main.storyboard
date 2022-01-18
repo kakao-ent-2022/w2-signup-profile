@@ -44,7 +44,7 @@
                                             <fontDescription key="titleFontDescription" style="UICTFontTextStyleBody"/>
                                         </buttonConfiguration>
                                         <connections>
-                                            <segue destination="RPt-DJ-09w" kind="show" id="cy9-Ha-oGJ"/>
+                                            <segue destination="RPt-DJ-09w" kind="show" id="3oZ-EY-afN"/>
                                         </connections>
                                     </button>
                                 </subviews>
@@ -63,6 +63,10 @@
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="uXv-re-xNy"/>
+                    <connections>
+                        <outlet property="idTextField" destination="KmT-CB-0dJ" id="Kxm-W6-0US"/>
+                        <outlet property="passwordTextField" destination="Hif-mQ-k9d" id="gyE-CX-tuo"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ZQj-nE-i2k" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
