@@ -118,6 +118,9 @@
                                         </fragment>
                                     </attributedString>
                                 </buttonConfiguration>
+                                <connections>
+                                    <action selector="close:" destination="Z9x-zc-RuT" eventType="touchUpInside" id="eeg-T8-sts"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fw1-IQ-FyV">
                                 <rect key="frame" x="331" y="34" width="73" height="37"/>

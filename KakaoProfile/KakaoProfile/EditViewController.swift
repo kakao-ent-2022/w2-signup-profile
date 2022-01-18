@@ -16,6 +16,10 @@ class EditViewController: UIViewController {
     @IBOutlet weak var nameEditText: UITextField!
     @IBOutlet weak var descriptionEditText: UITextField!
 
+    @IBAction func close(_ sender: Any) {
+        self.presentingViewController?.dismiss(animated: true, completion: nil)
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
