@@ -15,6 +15,7 @@
 		D4117D4C2795153D005C55A7 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D4117D4A2795153D005C55A7 /* LaunchScreen.storyboard */; };
 		D43172DE2795375200453B83 /* EditViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D43172DD2795375200453B83 /* EditViewController.swift */; };
 		D43172E027954B0B00453B83 /* ProfileDataDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D43172DF27954B0B00453B83 /* ProfileDataDelegate.swift */; };
+		D4FA3BA927967C4A00F58EA4 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4FA3BA827967C4A00F58EA4 /* LoginViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -28,6 +29,7 @@
 		D4117D4D2795153D005C55A7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		D43172DD2795375200453B83 /* EditViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditViewController.swift; sourceTree = "<group>"; };
 		D43172DF27954B0B00453B83 /* ProfileDataDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileDataDelegate.swift; sourceTree = "<group>"; };
+		D4FA3BA827967C4A00F58EA4 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -64,6 +66,7 @@
 				D4117D412795153C005C55A7 /* SceneDelegate.swift */,
 				D4117D432795153C005C55A7 /* ViewController.swift */,
 				D4117D452795153C005C55A7 /* Main.storyboard */,
+				D4FA3BA827967C4A00F58EA4 /* LoginViewController.swift */,
 				D43172DD2795375200453B83 /* EditViewController.swift */,
 				D43172DF27954B0B00453B83 /* ProfileDataDelegate.swift */,
 				D4117D482795153D005C55A7 /* Assets.xcassets */,
@@ -144,6 +147,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D4FA3BA927967C4A00F58EA4 /* LoginViewController.swift in Sources */,
 				D43172DE2795375200453B83 /* EditViewController.swift in Sources */,
 				D4117D442795153C005C55A7 /* ViewController.swift in Sources */,
 				D4117D402795153C005C55A7 /* AppDelegate.swift in Sources */,

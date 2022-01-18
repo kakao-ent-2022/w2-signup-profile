@@ -35,7 +35,9 @@ class EditViewController: UIViewController {
     @IBAction func doneButtonTouched(_ sender: Any) {
         let name = self.nameTextField.text ?? ""
         let description = self.descriptionTextField.text ?? ""
-        guard let image = self.profileImage.image else { return } //선택된 이미지가 없을때 done버튼이 수행이 안되는게 맞을까?
+        guard let image = self.profileImage.image else { return }
+        //선택된 이미지가 없을때 done버튼이 수행이 안되는게 맞을까?
+          // 사진이 없다고 알림을 주면서 dismiss하는게 자연스러울까?
         profileDataDelegate?.updateProfile(name: name, description: description, image: image)
         dismiss(animated: true, completion: nil)
     }
