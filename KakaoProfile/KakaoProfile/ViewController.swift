@@ -35,9 +35,10 @@ class ViewController: UIViewController, ProfileDataDelegate {
         }
     }
     
-    func updateProfile(name: String, description: String) {
+    func updateProfile(name: String, description: String, image: UIImage) {
         self.nameLabel.text = name
         self.descriptionLabel.text = description
+        self.profileImage.image = image
     }
 }
 

@@ -33,9 +33,10 @@ class EditViewController: UIViewController {
     }
     
     @IBAction func doneButtonTouched(_ sender: Any) {
-        let name = nameTextField.text ?? ""
-        let description = descriptionTextField.text ?? ""
-        profileDataDelegate?.updateProfile(name: name, description: description)
+        let name = self.nameTextField.text ?? ""
+        let description = self.descriptionTextField.text ?? ""
+        guard let image = self.profileImage.image else { return } //선택된 이미지가 없을때 done버튼이 수행이 안되는게 맞을까?
+        profileDataDelegate?.updateProfile(name: name, description: description, image: image)
         dismiss(animated: true, completion: nil)
     }
     
