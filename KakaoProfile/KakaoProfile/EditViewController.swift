@@ -24,13 +24,8 @@ class EditViewController: UIViewController {
     }
     
     func updateUI() {
-        guard let name = nameText,
-               let description = descriptionText
-        else {
-            return
-        }
-        self.nameTextField.text = name
-        self.descriptionTextField.text = description
+        self.nameTextField.text = nameText
+        self.descriptionTextField.text = descriptionText
     }
     
     @IBAction func close(_ sender: Any) {
