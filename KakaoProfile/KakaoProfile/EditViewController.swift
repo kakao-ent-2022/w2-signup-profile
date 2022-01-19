@@ -8,23 +8,24 @@
 import UIKit
 import PhotosUI
 
-class EditViewController: UIViewController {
+class EditViewController: UIViewController, Profile {
+    
     
     @IBOutlet var profileImage: UIImageView!
     @IBOutlet var nameTextEdit: UITextField!
     @IBOutlet var descriptionTextEdit: UITextField!
-    var profile: Profile!
+    weak var delegate: ProfileDelegate?
+    var profileImageContent: UIImage?
+    var profileName: String?
+    var profileDescription: String?
+    
 
     override func viewDidLoad() {
         super.viewDidLoad()
         profileImage?.layer.cornerRadius = (profileImage?.frame.size.width ?? 0.0) / 3
-        
-        if profile == nil {
-            profile = Profile(name: "", description: "", image: nil)
-        }
-        profileImage.image = profile.image
-        nameTextEdit.text = profile.name
-        descriptionTextEdit.text = profile.description
+        profileImage.image = profileImageContent
+        nameTextEdit.text = profileName
+        descriptionTextEdit.text = profileDescription
     }
     
     @IBAction func selectImageButtonTouched(_ sender: UIButton) {
@@ -39,7 +40,7 @@ class EditViewController: UIViewController {
     }
     
     @IBAction func doneButtonTouched(_ sender: UIButton) {
-        profile.confirmNewProfile(name: nameTextEdit.text, description: descriptionTextEdit.text, image: nil )
+        confirmNewProfile(name: nameTextEdit.text, description: descriptionTextEdit.text, image: nil )
         dismiss(animated: true, completion: nil)
     }
     @IBAction func clearNameButtonTouched(_ sender: UIButton) {
@@ -68,6 +69,11 @@ class EditViewController: UIViewController {
         present(picker, animated: true)
     }
     
+    
+    func confirmNewProfile(name: String?, description: String?, image: UIImage?) {
+        delegate?.profileDidSet(self)
+    }
+    
 }
 
 extension EditViewController: PHPickerViewControllerDelegate {
@@ -90,7 +96,7 @@ extension EditViewController: PHPickerViewControllerDelegate {
     private func handleCompletion(assetIdentifier: String, object: Any?, error: Error? = nil) {
         if let image = object as? UIImage {
             profileImage.image = image
-            profile.image = image
+            self.profileImageContent = image
 
         } else if let error = error {
             print("Couldn't display \(assetIdentifier) with error: \(error)")
