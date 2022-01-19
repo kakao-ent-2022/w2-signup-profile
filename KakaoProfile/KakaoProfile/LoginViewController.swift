@@ -10,6 +10,8 @@ import UIKit
 class LoginViewController: UIViewController, UINavigationControllerDelegate {
     @IBOutlet var idTextEdit: UITextField!
     @IBOutlet var passwordTextEdit: UITextField!
+    @IBOutlet var clearIdButton: UIButton!
+    @IBOutlet var clearPasswordButton: UIButton!
     
     let realId = "1234"
     let realPassword = "1234"
@@ -17,6 +19,8 @@ class LoginViewController: UIViewController, UINavigationControllerDelegate {
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
+        clearIdButton.isHidden = true
+        clearPasswordButton.isHidden = true
     }
 
     
@@ -30,11 +34,23 @@ class LoginViewController: UIViewController, UINavigationControllerDelegate {
             let inputPassword = passwordTextEdit.text
             return isValidLoginForm(id: inputId, password: inputPassword)
         }
-        
         return true
     }
     
-    
+    @IBAction func clearIdButtonTouched(_ sender: UIButton) {
+        idTextEdit.text = ""
+        clearIdButton.isHidden = true
+    }
+    @IBAction func clearPasswordButtonTouched(_ sender: UIButton) {
+        passwordTextEdit.text = ""
+        clearPasswordButton.isHidden = true
+    }
+    @IBAction func idInputChanged(_ sender: UITextField) {
+        clearIdButton.isHidden = idTextEdit.text?.isEmpty ?? true
+    }
+    @IBAction func passwordInputChanged(_ sender: UITextField) {
+        clearPasswordButton.isHidden = passwordTextEdit.text?.isEmpty ?? true
+    }
     
 }
 

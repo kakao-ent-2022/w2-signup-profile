@@ -10,6 +10,7 @@
 		5E2152AB2796477900A3696B /* EditViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E2152AA2796477900A3696B /* EditViewController.swift */; };
 		5E2152B3279695B300A3696B /* Profile.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E2152B2279695B300A3696B /* Profile.swift */; };
 		5EA5F5912796B8AB001C5D89 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5EA5F5902796B8AB001C5D89 /* MainViewController.swift */; };
+		5EA5F5932797C9CA001C5D89 /* choonsik.png in Resources */ = {isa = PBXBuildFile; fileRef = 5EA5F5922797C9CA001C5D89 /* choonsik.png */; };
 		5EAE05B5279530A100402029 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5EAE05B4279530A100402029 /* AppDelegate.swift */; };
 		5EAE05B7279530A100402029 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5EAE05B6279530A100402029 /* SceneDelegate.swift */; };
 		5EAE05B9279530A100402029 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5EAE05B8279530A100402029 /* ViewController.swift */; };
@@ -43,6 +44,7 @@
 		5E2152AA2796477900A3696B /* EditViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditViewController.swift; sourceTree = "<group>"; };
 		5E2152B2279695B300A3696B /* Profile.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Profile.swift; sourceTree = SOURCE_ROOT; };
 		5EA5F5902796B8AB001C5D89 /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
+		5EA5F5922797C9CA001C5D89 /* choonsik.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = choonsik.png; sourceTree = "<group>"; };
 		5EAE05B1279530A100402029 /* KakaoProfile.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = KakaoProfile.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		5EAE05B4279530A100402029 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		5EAE05B6279530A100402029 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -107,6 +109,7 @@
 		5EAE05B3279530A100402029 /* KakaoProfile */ = {
 			isa = PBXGroup;
 			children = (
+				5EA5F5922797C9CA001C5D89 /* choonsik.png */,
 				5E2152AA2796477900A3696B /* EditViewController.swift */,
 				5EAE05B4279530A100402029 /* AppDelegate.swift */,
 				5EA5F5902796B8AB001C5D89 /* MainViewController.swift */,
@@ -244,6 +247,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				5EAE05C1279530A200402029 /* LaunchScreen.storyboard in Resources */,
+				5EA5F5932797C9CA001C5D89 /* choonsik.png in Resources */,
 				5EAE05BE279530A200402029 /* Assets.xcassets in Resources */,
 				5EAE05BC279530A100402029 /* Main.storyboard in Resources */,
 			);
