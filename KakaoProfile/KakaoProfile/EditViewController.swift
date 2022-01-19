@@ -24,8 +24,13 @@ class EditViewController: UIViewController {
     }
     
     func updateUI() {
-        nameTextField.text = nameText ?? ""
-        descriptionTextField.text = descriptionText ?? ""
+        guard let name = nameText,
+               let description = descriptionText
+        else {
+            return
+        }
+        self.nameTextField.text = name
+        self.descriptionTextField.text = description
     }
     
     @IBAction func close(_ sender: Any) {
@@ -33,11 +38,14 @@ class EditViewController: UIViewController {
     }
     
     @IBAction func doneButtonTouched(_ sender: Any) {
-        let name = self.nameTextField.text ?? ""
-        let description = self.descriptionTextField.text ?? ""
-        guard let image = self.profileImage.image else { return }
-        //선택된 이미지가 없을때 done버튼이 수행이 안되는게 맞을까?
-          // 사진이 없다고 알림을 주면서 dismiss하는게 자연스러울까?
+        guard let name = self.nameTextField.text,
+               let description = self.descriptionTextField.text,
+               let image = self.profileImage.image
+        else {
+            return
+        }
+        // 선택된 이미지가 없을때 done버튼이 수행이 안되는게 맞을까?
+        // 사진이 없다고 알림을 주면서 dismiss하는게 자연스러울까?
         profileDataDelegate?.updateProfile(name: name, description: description, image: image)
         dismiss(animated: true, completion: nil)
     }
@@ -56,6 +64,7 @@ class EditViewController: UIViewController {
         super.viewWillDisappear(animated)
         print(#file, #line, #function, #column)
     }
+    
     override func viewDidDisappear(_ animated: Bool) {
         super.viewDidDisappear(animated)
         print(#file, #line, #function, #column)
@@ -73,7 +82,6 @@ class EditViewController: UIViewController {
 }
 
 extension EditViewController: UIImagePickerControllerDelegate, UINavigationControllerDelegate {
-    
     func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey : Any]) {
         guard let image = info[.originalImage] as? UIImage else { return }
         guard let data = image.jpegData(compressionQuality: 0.1) else { return }
@@ -84,6 +92,5 @@ extension EditViewController: UIImagePickerControllerDelegate, UINavigationContr
     func imagePickerControllerDidCancel(_ picker: UIImagePickerController) {
         picker.dismiss(animated: true)
     }
-    
 }
 

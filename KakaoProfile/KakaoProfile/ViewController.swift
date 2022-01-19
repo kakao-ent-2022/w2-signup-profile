@@ -8,7 +8,6 @@
 import UIKit
 
 class ViewController: UIViewController, ProfileDataDelegate {
-    
     @IBOutlet weak var profileImage: UIImageView!
     @IBOutlet weak var nameLabel: UILabel!
     @IBOutlet weak var descriptionLabel: UILabel!
