@@ -20,6 +20,13 @@
 
 ## :four: 로그인 기능
 - 시간: 2022.01.19 12:16
-- [commit link]()  
+- [commit link](https://github.com/nylah-j/w2-signup-profile/tree/a289e3aedb8297c51eeaf0e4b3497a225bd1ed1a)  
 <img width="400" src="https://media.giphy.com/media/orBmyq9aHYvv0OM6EF/giphy.gif"/>
+
+- 핵심 기능: 
+  - 입력한 아이디가 "kakao", 패스워드가 "kakao" 일 경우, 로그인 버튼을 눌렀을 때 웹뷰를 보여주는 화면으로 이동합니다.  
+    
+  - 로그인 화면에서 웹뷰를 보여주는 화면으로 이동할 때 NavigationController를 사용했습니다. 
+
+  - 웹뷰는 WebKit의 WKWebView를 이용하여 구현했습니다.
 
