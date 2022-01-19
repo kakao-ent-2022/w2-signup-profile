@@ -8,5 +8,5 @@
 import UIKit
 
 protocol ProfileDataDelegate {
-    func updateProfile(name: String, description: String, image: UIImage)
+    func updateProfile(name: String?, description: String?, image: UIImage?)
 }
