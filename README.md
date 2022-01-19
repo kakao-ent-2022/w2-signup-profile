@@ -15,5 +15,11 @@
 
 ## :three: 프로필 편집 기능
 - 시간: 2022.01.18 16:51
-- [commit link](https://github.com/nylah-j/w2-signup-profile/tree/73e29229f487b2d980ad15637e3def37e3298fa0)   
+- [commit link](https://github.com/nah-j/w2-signup-profile/tree/73e29229f487b2d980ad15637e3def37e3298fa0)   
 <img width="400" src="https://media.giphy.com/media/XfxyFRzsKoDizTuvWm/giphy.gif"/>
+
+## :four: 로그인 기능
+- 시간: 2022.01.19 12:16
+- [commit link]()  
+<img width="400" src="https://media.giphy.com/media/orBmyq9aHYvv0OM6EF/giphy.gif"/>
+
