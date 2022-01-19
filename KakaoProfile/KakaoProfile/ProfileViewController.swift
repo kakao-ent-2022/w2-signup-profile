@@ -28,7 +28,7 @@ class ProfileViewController: UIViewController {
         self.initUI()
     }
 
-    fileprivate func initUI() {
+    private func initUI() {
         self.nameLabel.text = "River"
         self.descriptionLabel.text = "카르페 디엠"
         
