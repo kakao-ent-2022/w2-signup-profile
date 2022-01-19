@@ -268,32 +268,74 @@
             </objects>
             <point key="canvasLocation" x="3557" y="1529"/>
         </scene>
-        <!--View Controller-->
+        <!--Sign Up View Controller-->
         <scene sceneID="j3o-ma-aly">
             <objects>
-                <viewController id="ntU-Tu-rbG" sceneMemberID="viewController">
+                <viewController id="ntU-Tu-rbG" customClass="SignUpViewController" customModule="KakaoProfile" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="iJW-TV-9SW">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lsy-f6-Pah">
-                                <rect key="frame" x="158" y="433" width="67" height="31"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="회원가입" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cyJ-EY-HXy">
+                                <rect key="frame" x="164" y="124" width="86.5" height="30"/>
+                                <fontDescription key="fontDescription" style="UICTFontTextStyleTitle1"/>
+                                <color key="textColor" systemColor="systemGreenColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="equalSpacing" alignment="top" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="K59-kM-k9Y">
+                                <rect key="frame" x="41.5" y="234" width="331" height="350"/>
+                                <subviews>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="b5b-uK-kDw" customClass="SignUpTextFieldView" customModule="KakaoProfile" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="0.0" width="331" height="80"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="80" id="9cl-2f-LXv"/>
+                                        </constraints>
+                                    </view>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="hfZ-3S-ptI" customClass="SignUpTextFieldView" customModule="KakaoProfile" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="90" width="331" height="80"/>
+                                    </view>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="upe-YO-kRb" customClass="SignUpTextFieldView" customModule="KakaoProfile" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="180" width="331" height="80"/>
+                                    </view>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="4zz-ho-H96" customClass="SignUpTextFieldView" customModule="KakaoProfile" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="270" width="331" height="80"/>
+                                    </view>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstItem="upe-YO-kRb" firstAttribute="width" secondItem="b5b-uK-kDw" secondAttribute="width" id="OC6-Tl-1hu"/>
+                                    <constraint firstItem="hfZ-3S-ptI" firstAttribute="width" secondItem="b5b-uK-kDw" secondAttribute="width" id="Tne-lI-hY7"/>
+                                    <constraint firstItem="4zz-ho-H96" firstAttribute="height" secondItem="b5b-uK-kDw" secondAttribute="height" id="ex0-GF-wHI"/>
+                                    <constraint firstItem="upe-YO-kRb" firstAttribute="height" secondItem="b5b-uK-kDw" secondAttribute="height" id="fto-ge-NR1"/>
+                                    <constraint firstItem="hfZ-3S-ptI" firstAttribute="height" secondItem="b5b-uK-kDw" secondAttribute="height" id="juM-fm-7TP"/>
+                                    <constraint firstItem="4zz-ho-H96" firstAttribute="width" secondItem="b5b-uK-kDw" secondAttribute="width" id="qyr-iK-pbY"/>
+                                </constraints>
+                            </stackView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lsy-f6-Pah">
+                                <rect key="frame" x="183" y="592" width="48.5" height="31"/>
                                 <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="plain" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="다음"/>
                                 <connections>
                                     <segue destination="krT-6B-Ihq" kind="presentation" modalPresentationStyle="fullScreen" modalTransitionStyle="crossDissolve" id="Bjr-NE-Wd1"/>
                                 </connections>
                             </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="LBz-DH-xhI"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <color key="backgroundColor" red="0.96120601890000001" green="0.96467930079999997" blue="0.96889036890000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="lsy-f6-Pah" firstAttribute="top" secondItem="K59-kM-k9Y" secondAttribute="bottom" constant="8" symbolic="YES" id="5TC-9P-i7K"/>
+                            <constraint firstItem="K59-kM-k9Y" firstAttribute="top" secondItem="cyJ-EY-HXy" secondAttribute="bottom" constant="80" id="6Ng-NA-XvZ"/>
+                            <constraint firstItem="cyJ-EY-HXy" firstAttribute="centerX" secondItem="iJW-TV-9SW" secondAttribute="centerX" id="GWH-ek-2NN"/>
+                            <constraint firstItem="lsy-f6-Pah" firstAttribute="centerX" secondItem="iJW-TV-9SW" secondAttribute="centerX" id="U94-ze-9mY"/>
+                            <constraint firstItem="cyJ-EY-HXy" firstAttribute="top" secondItem="LBz-DH-xhI" secondAttribute="top" constant="80" id="naq-u9-gbs"/>
+                            <constraint firstItem="K59-kM-k9Y" firstAttribute="centerX" secondItem="iJW-TV-9SW" secondAttribute="centerX" id="rho-3y-g6J"/>
+                            <constraint firstItem="b5b-uK-kDw" firstAttribute="width" secondItem="LBz-DH-xhI" secondAttribute="width" multiplier="0.8" id="wQW-ZW-qCD"/>
+                        </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="gZ5-J5-S3l"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="6MT-0A-A7C" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="710" y="1071"/>
+            <point key="canvasLocation" x="708.69565217391312" y="1070.0892857142856"/>
         </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="zaQ-po-kaA">
@@ -344,6 +386,9 @@
         </systemColor>
         <systemColor name="systemGray4Color">
             <color red="0.81960784313725488" green="0.81960784313725488" blue="0.83921568627450982" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="systemGreenColor">
+            <color red="0.20392156862745098" green="0.7803921568627451" blue="0.34901960784313724" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
     </resources>
 </document>
