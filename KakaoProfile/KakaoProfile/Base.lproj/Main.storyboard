@@ -84,7 +84,7 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7Vh-ud-3KY">
-                                <rect key="frame" x="159" y="569" width="97" height="39"/>
+                                <rect key="frame" x="159" y="572" width="97" height="39"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <state key="normal" title="Button"/>
@@ -93,7 +93,7 @@
                                     <color key="baseBackgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </buttonConfiguration>
                                 <connections>
-                                    <action selector="loginButtonTouched:" destination="xZD-iJ-d3c" eventType="touchUpInside" id="Si2-CY-x12"/>
+                                    <segue destination="k8Z-yu-8Zq" kind="show" identifier="showNews" id="kwp-2C-rHI"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -120,6 +120,7 @@
                         <viewLayoutGuide key="safeArea" id="HZi-Nt-st0"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     </view>
+                    <navigationItem key="navigationItem" id="vE8-iM-Gdg"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="mNM-OR-kpP" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>

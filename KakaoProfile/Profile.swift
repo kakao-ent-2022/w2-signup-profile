@@ -8,9 +8,7 @@
 import UIKit
 
 protocol ProfileDelegate: AnyObject {
-    
     func profileDidSet(_ profile: Profile)
-    
 }
 
 class Profile {

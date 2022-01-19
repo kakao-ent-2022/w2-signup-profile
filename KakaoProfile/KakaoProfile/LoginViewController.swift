@@ -7,11 +7,11 @@
 
 import UIKit
 
-class LoginViewController: UIViewController {
+class LoginViewController: UIViewController, UINavigationControllerDelegate {
     @IBOutlet var idTextEdit: UITextField!
     @IBOutlet var passwordTextEdit: UITextField!
     
-    let realId = "lauren.c"
+    let realId = "1234"
     let realPassword = "1234"
     
     override func viewDidLoad() {
@@ -19,18 +19,22 @@ class LoginViewController: UIViewController {
         // Do any additional setup after loading the view.
     }
 
-    @IBAction func loginButtonTouched(_ sender: UIButton) {
-        let inputId = idTextEdit.text
-        let inputPassword = passwordTextEdit.text
-        
-        if isValidLoginForm(id: inputId, password: inputPassword) {
-            
-        }
-    }
     
     private func isValidLoginForm(id: String?, password: String?) -> Bool {
         return id == self.realId && password == self.realPassword
     }
+    
+    override func shouldPerformSegue(withIdentifier identifier: String, sender: Any?) -> Bool {
+        if identifier == "showNews" {
+            let inputId = idTextEdit.text
+            let inputPassword = passwordTextEdit.text
+            return isValidLoginForm(id: inputId, password: inputPassword)
+        }
+        
+        return true
+    }
+    
+    
     
 }
 
