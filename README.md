@@ -19,6 +19,7 @@
 - Edit Click Event 추가 
 
 [버튼 누르기 전후 사진]
+
 <img src="https://user-images.githubusercontent.com/95729473/150077236-e79615ea-4160-4907-a11c-5aa6261e3dce.png" width="300"/><img src="https://user-images.githubusercontent.com/95729473/150077242-90e37543-45a2-44be-89a6-cec9467c5c82.png" width="300"/>
 
 ### 완성 날짜
@@ -50,4 +51,17 @@
 ### 완성 날짜
 2022년 1월 19일 오후 3시 11분
 
+---
+
+## 8. 내비게이션-컨트롤러
+### 구현 내용 
+- Navigation Controller 적용 
+- 로그인 UI 및 Main UI
+- 로그인 성공 시 화면 이동 기능
+- 웹뷰로 카카오페이지 띄우기 
+
+<img src="https://user-images.githubusercontent.com/95729473/150137912-d2914206-7782-4796-b5a1-0ba35776fe69.gif" width="300"/>
+
+### 완성 날짜
+2022년 1월 19일 오후 10시 10분
 
