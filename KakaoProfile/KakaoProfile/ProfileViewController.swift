@@ -69,28 +69,32 @@ class ProfileViewController: UIViewController, EditProfileDataProtocol {
         }
     }
     
-    override func viewWillAppear(_ animated: Bool) {
-        print(#file, #line, #function, #column)
-    }
-    
-    override func viewDidAppear(_ animated: Bool) {
-        print(#file, #line, #function, #column)
-    }
-    
-    override func viewWillDisappear(_ animated: Bool) {
-        print(#file, #line, #function, #column)
-    }
-    
-    override func viewDidDisappear(_ animated: Bool) {
-        print(#file, #line, #function, #column)
-    }
-    
     func sendProfileData(nameText: String?, descriptionText: String?, profileImage: UIImage?) {
         self.nameText = nameText
         self.descriptionText = descriptionText
         self.profileImage = profileImage
         
         setUI()
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        print(#file, #line, #function, #column)
+    }
+    
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+        print(#file, #line, #function, #column)
+    }
+    
+    override func viewWillDisappear(_ animated: Bool) {
+        super.viewWillDisappear(animated)
+        print(#file, #line, #function, #column)
+    }
+    
+    override func viewDidDisappear(_ animated: Bool) {
+        super.viewDidDisappear(animated)
+        print(#file, #line, #function, #column)
     }
 }
 
