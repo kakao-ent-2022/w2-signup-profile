@@ -13,7 +13,6 @@ class ViewController: UIViewController, EditProfileDelegate {
     @IBOutlet weak var nameLable: UILabel!
     @IBOutlet weak var descriptionLabel: UILabel!
     @IBOutlet weak var editButton: UIButton!
-    private var profileImage =  UIImage(named: "good_lion.png")
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -29,47 +28,45 @@ class ViewController: UIViewController, EditProfileDelegate {
     }
     
     func initNameLabel() {
-        self.nameLable.text = "JK"
-        self.nameLable.textColor = UIColor.cyan
-        self.nameLable.font = self.nameLable.font.withSize(25)
-        self.nameLable.layer.shadowOpacity = 0.5
-        self.nameLable.textAlignment = NSTextAlignment.center
+        nameLable.text = "JK"
+        nameLable.textColor = UIColor.cyan
+        nameLable.font = self.nameLable.font.withSize(25)
+        nameLable.layer.shadowOpacity = 0.5
+        nameLable.textAlignment = NSTextAlignment.center
     }
     
     func initDescriptionLabel() {
-        self.descriptionLabel.text = "카르페 디엠"
-        self.descriptionLabel.textColor = UIColor.brown
-        self.descriptionLabel.backgroundColor = UIColor.darkGray
-        self.descriptionLabel.textAlignment = NSTextAlignment.center
+        descriptionLabel.text = "카르페 디엠"
+        descriptionLabel.textColor = UIColor.brown
+        descriptionLabel.backgroundColor = UIColor.darkGray
+        descriptionLabel.textAlignment = NSTextAlignment.center
     }
     
     func initProfileImage() {
-        self.profileImageView.clipsToBounds = true
-        self.profileImageView.layer.cornerRadius = 0.5 * self.profileImageView.bounds.width
-        self.profileImageView.image = self.profileImage
+        profileImageView.clipsToBounds = true
+        profileImageView.layer.cornerRadius = 0.5 * self.profileImageView.bounds.width
+        profileImageView.image = UIImage(named: "good_lion.png")
     }
 
     @IBAction func editButtonTouched(_ sender: UIButton) {
-        self.nameLable.textColor = UIColor.blue
-        self.nameLable.backgroundColor = UIColor.yellow
-        self.nameLable.alpha = 0.5
-        self.descriptionLabel.text = "크루미션"
+        nameLable.textColor = UIColor.blue
+        nameLable.backgroundColor = UIColor.yellow
+        nameLable.alpha = 0.5
+        descriptionLabel.text = "크루미션"
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if let destination = segue.destination as? EditViewController {
-            destination.nameText = self.nameLable.text ??   ""
-            destination.descriptionText = self.descriptionLabel.text ?? ""
+            destination.nameText = nameLable.text
+            destination.descriptionText = descriptionLabel.text
             destination.delegate = self
         }
     }
     
     func sendProfile(profileImage: UIImage, name: String, description: String) {
-        self.nameLable.text = name
-        self.descriptionLabel.text = description
-        self.profileImage =  profileImage
-        self.profileImageView.image = self.profileImage
-        dismiss(animated: true, completion: nil)
+        nameLable.text = name
+        descriptionLabel.text = description
+        profileImageView.image = profileImage
     }
     
     override func viewWillAppear(_ animated: Bool) {

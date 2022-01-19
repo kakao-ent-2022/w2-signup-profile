@@ -7,9 +7,9 @@
 
 import UIKit
 
-class EditViewController: UIViewController, UIImagePickerControllerDelegate,  UINavigationControllerDelegate {
-    var nameText: String = ""
-    var descriptionText: String = ""
+class EditViewController: UIViewController {
+    var nameText: String?
+    var descriptionText: String?
     
     @IBOutlet weak var selectImageButton: UIButton!
     @IBOutlet weak var nameTextField: UITextField!
@@ -18,7 +18,7 @@ class EditViewController: UIViewController, UIImagePickerControllerDelegate,  UI
     
     private let imagePickerController = UIImagePickerController()
     
-    var delegate: EditProfileDelegate?
+    weak var delegate: EditProfileDelegate?
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -27,7 +27,6 @@ class EditViewController: UIViewController, UIImagePickerControllerDelegate,  UI
         initNameTextField()
         initDescriptoinTextField()
         initProfileImageView()
-
     }
     
     func initPhotoPickerButton() {
@@ -65,19 +64,18 @@ class EditViewController: UIViewController, UIImagePickerControllerDelegate,  UI
         
         imagePickerController.mediaTypes = availableMediaTypes ?? []
         imagePickerController.delegate = self
-        self.present(imagePickerController, animated: true, completion: nil)
-    }
-    
-    func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey : Any]) {
-        let originImage = info[.originalImage] as? UIImage
-        profileImageView.image = originImage
+        present(imagePickerController, animated: true, completion: nil)
     }
     
     @IBAction func doneButtonTouched(_ sender: Any) {
-        let name = nameTextField.text ?? ""
-        let description = descriptionTextField.text ?? ""
-        let profileImage = profileImageView.image ?? UIImage()
+        guard let name = nameTextField.text,
+              let description = descriptionTextField.text,
+              let profileImage = profileImageView.image else {
+                    return
+              }
+        
         delegate?.sendProfile(profileImage: profileImage, name: name, description: description)
+        dismiss(animated: true, completion: nil)
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -94,5 +92,18 @@ class EditViewController: UIViewController, UIImagePickerControllerDelegate,  UI
     
     override func viewDidDisappear(_ animated: Bool) {
         print(#file, #line, #function, #column)
+    }
+}
+
+extension EditViewController: UIImagePickerControllerDelegate, UINavigationControllerDelegate {
+    func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey : Any]) {
+        
+        let originImage = info[.originalImage] as? UIImage
+        profileImageView.image = originImage
+        picker.dismiss(animated: true, completion: nil)
+    }
+    
+    func imagePickerControllerDidCancel(_ picker: UIImagePickerController) {
+        picker.dismiss(animated: true)
     }
 }
