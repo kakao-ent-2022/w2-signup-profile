@@ -55,7 +55,7 @@
                     <connections>
                         <outlet property="descriptionLabel" destination="DhY-Mw-3Zv" id="2Iw-st-NVv"/>
                         <outlet property="nameLabel" destination="iDV-u3-3cN" id="OR7-Oo-yap"/>
-                        <outlet property="profileImage" destination="jB8-f3-Nsb" id="sZP-Mp-eUf"/>
+                        <outlet property="profileImageView" destination="jB8-f3-Nsb" id="sZP-Mp-eUf"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
@@ -113,7 +113,7 @@
                                     </attributedString>
                                 </buttonConfiguration>
                                 <connections>
-                                    <action selector="close:" destination="Z9x-zc-RuT" eventType="touchUpInside" id="eeg-T8-sts"/>
+                                    <action selector="selectCancleButtonTouched:" destination="Z9x-zc-RuT" eventType="touchUpInside" id="4du-0D-YdP"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fw1-IQ-FyV">
@@ -134,6 +134,9 @@
                                         </fragment>
                                     </attributedString>
                                 </buttonConfiguration>
+                                <connections>
+                                    <action selector="selectDoneButtonTouched:" destination="Z9x-zc-RuT" eventType="touchUpInside" id="9RB-w5-ETj"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="uAF-2x-0i8">
                                 <rect key="frame" x="230" y="505" width="50" height="50"/>

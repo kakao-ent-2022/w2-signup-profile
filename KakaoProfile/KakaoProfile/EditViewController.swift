@@ -9,18 +9,20 @@ import UIKit
 
 class EditViewController: UIViewController {
 
-    var nameText : String = ""
-    var descriptionText: String = ""
+    var nameText : String?
+    var descriptionText: String?
     var profileImage: UIImage?
     
     private let imagePickerController = UIImagePickerController()
 
+    weak var profileDelegate: EditProfileDataProtocol?
+    
     @IBOutlet weak var nameEditText: UITextField!
     @IBOutlet weak var descriptionEditText: UITextField!
     @IBOutlet weak var profileImageView: UIImageView!
     
-    @IBAction func close(_ sender: Any) {
-        presentingViewController?.dismiss(animated: true, completion: nil)
+    @IBAction func selectCancleButtonTouched(_ sender: Any) {
+        close()
     }
     
     @IBAction func selectImageButtonTouched(_ sender: Any) {
@@ -30,6 +32,11 @@ class EditViewController: UIViewController {
         imagePickerController.sourceType = imagePickerType
         imagePickerController.delegate = self
         present(imagePickerController, animated: true, completion: nil)
+    }
+    
+    @IBAction func selectDoneButtonTouched(_ sender: Any) {
+        profileDelegate?.sendProfileData(nameText: nameEditText.text, descriptionText: descriptionEditText.text, profileImage: profileImage)
+        close()
     }
     
     override func viewDidLoad() {
@@ -46,6 +53,10 @@ class EditViewController: UIViewController {
         if profileImage != nil {
             profileImageView.image = profileImage
         }
+    }
+    
+    private func close() {
+        presentingViewController?.dismiss(animated: true, completion: nil)
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -74,7 +85,6 @@ extension EditViewController: UIImagePickerControllerDelegate & UINavigationCont
             
             dismiss(animated: true)
         }
-        
     }
     
     func imagePickerControllerDidCancel(_ picker: UIImagePickerController) {

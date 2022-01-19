@@ -7,17 +7,21 @@
 
 import UIKit
 
-class ProfileViewController: UIViewController {
+class ProfileViewController: UIViewController, EditProfileDataProtocol {
 
-    @IBOutlet weak var profileImage: UIImageView!
+    var nameText : String?
+    var descriptionText: String?
+    var profileImage: UIImage?
+    
+    @IBOutlet weak var profileImageView: UIImageView!
     @IBOutlet weak var nameLabel: UILabel!
     @IBOutlet weak var descriptionLabel: UILabel!
     
     @IBAction func editButtonTouched(_ sender: Any) {
-        self.nameLabel.textColor = UIColor.blue
-        self.nameLabel.backgroundColor = UIColor.yellow
-        self.nameLabel.alpha = 0.5
-        self.descriptionLabel.text = "크루미션"
+        nameLabel.textColor = UIColor.blue
+        nameLabel.backgroundColor = UIColor.yellow
+        nameLabel.alpha = 0.5
+        descriptionLabel.text = "크루미션"
     }
     
     override func viewDidLoad() {
@@ -25,30 +29,43 @@ class ProfileViewController: UIViewController {
         
         print(#file, #line, #function, #column)
         
-        self.initUI()
+        initUI()
     }
 
     private func initUI() {
-        self.nameLabel.text = "River"
-        self.descriptionLabel.text = "카르페 디엠"
+        nameText = "River"
+        descriptionText = "카르페 디엠"
         
-        self.nameLabel.font = UIFont.systemFont(ofSize: 24)
-        self.descriptionLabel.font = UIFont.systemFont(ofSize: 15)
+        setUI()
+    }
+    
+    private func setUI() {
+        nameLabel.text = nameText
+        descriptionLabel.text = descriptionText
+        
+        nameLabel.font = UIFont.systemFont(ofSize: 24)
+        descriptionLabel.font = UIFont.systemFont(ofSize: 15)
 
-        self.nameLabel.sizeToFit()
-        self.descriptionLabel.sizeToFit()
+        nameLabel.sizeToFit()
+        descriptionLabel.sizeToFit()
         
-        self.nameLabel.textAlignment = .center
-        self.descriptionLabel.textAlignment = .center
+        nameLabel.textAlignment = .center
+        descriptionLabel.textAlignment = .center
         
-        self.nameLabel.center.x = self.view.frame.width / 2
-        self.descriptionLabel.center.x = self.view.frame.width / 2
+        nameLabel.center.x = view.frame.width / 2
+        descriptionLabel.center.x = view.frame.width / 2
+        
+        profileImageView.contentMode = .scaleAspectFill
+        profileImageView.image = profileImage
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if let destination = segue.destination as? EditViewController {
-            destination.nameText = self.nameLabel.text ?? ""
-            destination.descriptionText = self.descriptionLabel.text ?? "" 
+            destination.nameText = nameLabel.text ?? ""
+            destination.descriptionText = descriptionLabel.text ?? ""
+            destination.profileImage = profileImageView.image
+
+            destination.profileDelegate = self
         }
     }
     
@@ -66,6 +83,14 @@ class ProfileViewController: UIViewController {
     
     override func viewDidDisappear(_ animated: Bool) {
         print(#file, #line, #function, #column)
+    }
+    
+    func sendProfileData(nameText: String?, descriptionText: String?, profileImage: UIImage?) {
+        self.nameText = nameText
+        self.descriptionText = descriptionText
+        self.profileImage = profileImage
+        
+        setUI()
     }
 }
 
