@@ -207,7 +207,7 @@
                                 <rect key="frame" x="62" y="517" width="291" height="34"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
+                                <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
                             </textField>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" hasAttributedTitle="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Ahr-nr-khF">
                                 <rect key="frame" x="155" y="590" width="105" height="42"/>
@@ -237,6 +237,9 @@
                                         </fragment>
                                     </attributedString>
                                 </buttonConfiguration>
+                                <connections>
+                                    <action selector="selectLoginButtonTouched:" destination="Vsz-Cy-XJa" eventType="touchUpInside" id="0Dn-vs-UrK"/>
+                                </connections>
                             </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="Bq0-Bm-uz0"/>
@@ -247,6 +250,7 @@
                         <outlet property="idEditText" destination="Qfh-kj-nQ4" id="QAe-L6-En2"/>
                         <outlet property="logoImageView" destination="9lp-ea-pSn" id="daw-eJ-esS"/>
                         <outlet property="passwordEditText" destination="M7j-UZ-Pa0" id="baY-zx-E43"/>
+                        <segue destination="Qje-Ve-eTX" kind="show" identifier="onLoginSuccess" id="d3P-yy-kt3"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="0Wn-fX-1km" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -272,6 +276,22 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dpF-tK-Hyk" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="985.50724637681162" y="508.92857142857139"/>
+        </scene>
+        <!--Main View Controller-->
+        <scene sceneID="UsJ-Zh-mtE">
+            <objects>
+                <viewController id="Qje-Ve-eTX" customClass="MainViewController" customModule="KakaoProfile" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="zUC-1j-Woi">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <viewLayoutGuide key="safeArea" id="8ca-FP-DHn"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="5Cz-2a-x0b"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="aTB-Mk-NRE" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2762" y="509"/>
         </scene>
     </scenes>
     <resources>
