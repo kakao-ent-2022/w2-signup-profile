@@ -13,9 +13,12 @@
 		2EB2FD392795551800A421FC /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2EB2FD372795551800A421FC /* Main.storyboard */; };
 		2EB2FD3B2795551800A421FC /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2EB2FD3A2795551800A421FC /* Assets.xcassets */; };
 		2EB2FD3E2795551800A421FC /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2EB2FD3C2795551800A421FC /* LaunchScreen.storyboard */; };
+		2EBDDFEA2796C76600C797C7 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2EBDDFE92796C76600C797C7 /* MainViewController.swift */; };
 		2EF6BBFF27966374000E78DA /* EditViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2EF6BBFE27966374000E78DA /* EditViewController.swift */; };
 		2EF6BC0127968E76000E78DA /* good_lion.png in Resources */ = {isa = PBXBuildFile; fileRef = 2EF6BC0027968E76000E78DA /* good_lion.png */; };
 		2EF6BC032796A405000E78DA /* EditProfileDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2EF6BC022796A405000E78DA /* EditProfileDelegate.swift */; };
+		2EF6BC052796C07A000E78DA /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2EF6BC042796C07A000E78DA /* LoginViewController.swift */; };
+		2EF6BC072796C15C000E78DA /* kakaotalk.png in Resources */ = {isa = PBXBuildFile; fileRef = 2EF6BC062796C15C000E78DA /* kakaotalk.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -27,9 +30,12 @@
 		2EB2FD3A2795551800A421FC /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		2EB2FD3D2795551800A421FC /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		2EB2FD3F2795551800A421FC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		2EBDDFE92796C76600C797C7 /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
 		2EF6BBFE27966374000E78DA /* EditViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditViewController.swift; sourceTree = "<group>"; };
 		2EF6BC0027968E76000E78DA /* good_lion.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = good_lion.png; sourceTree = "<group>"; };
 		2EF6BC022796A405000E78DA /* EditProfileDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditProfileDelegate.swift; sourceTree = "<group>"; };
+		2EF6BC042796C07A000E78DA /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
+		2EF6BC062796C15C000E78DA /* kakaotalk.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = kakaotalk.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -62,11 +68,14 @@
 		2EB2FD302795551700A421FC /* KakaoProfile */ = {
 			isa = PBXGroup;
 			children = (
+				2EF6BC062796C15C000E78DA /* kakaotalk.png */,
 				2EF6BC0027968E76000E78DA /* good_lion.png */,
 				2EB2FD312795551700A421FC /* AppDelegate.swift */,
 				2EB2FD332795551700A421FC /* SceneDelegate.swift */,
 				2EB2FD352795551800A421FC /* ViewController.swift */,
 				2EB2FD372795551800A421FC /* Main.storyboard */,
+				2EBDDFE92796C76600C797C7 /* MainViewController.swift */,
+				2EF6BC042796C07A000E78DA /* LoginViewController.swift */,
 				2EF6BBFE27966374000E78DA /* EditViewController.swift */,
 				2EB2FD3A2795551800A421FC /* Assets.xcassets */,
 				2EB2FD3C2795551800A421FC /* LaunchScreen.storyboard */,
@@ -138,6 +147,7 @@
 				2EB2FD3B2795551800A421FC /* Assets.xcassets in Resources */,
 				2EF6BC0127968E76000E78DA /* good_lion.png in Resources */,
 				2EB2FD392795551800A421FC /* Main.storyboard in Resources */,
+				2EF6BC072796C15C000E78DA /* kakaotalk.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -148,6 +158,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2EBDDFEA2796C76600C797C7 /* MainViewController.swift in Sources */,
+				2EF6BC052796C07A000E78DA /* LoginViewController.swift in Sources */,
 				2EF6BBFF27966374000E78DA /* EditViewController.swift in Sources */,
 				2EB2FD362795551800A421FC /* ViewController.swift in Sources */,
 				2EF6BC032796A405000E78DA /* EditProfileDelegate.swift in Sources */,

@@ -8,6 +8,6 @@
 import Foundation
 import UIKit
 
-protocol EditProfileDelegate {
+protocol EditProfileDelegate: AnyObject {
     func sendProfile(profileImage: UIImage, name: String, description: String)
 }
