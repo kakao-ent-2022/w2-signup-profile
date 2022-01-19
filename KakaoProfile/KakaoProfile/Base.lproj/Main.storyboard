@@ -311,9 +311,11 @@
                                 </constraints>
                             </stackView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lsy-f6-Pah">
-                                <rect key="frame" x="183" y="592" width="48.5" height="31"/>
+                                <rect key="frame" x="173" y="592" width="68.5" height="31"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <color key="tintColor" systemColor="systemGreenColor"/>
                                 <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="plain" title="다음"/>
+                                <buttonConfiguration key="configuration" style="plain" image="arrow.forward.circle.fill" catalog="system" title="다음"/>
                                 <connections>
                                     <segue destination="krT-6B-Ihq" kind="presentation" modalPresentationStyle="fullScreen" modalTransitionStyle="crossDissolve" id="Bjr-NE-Wd1"/>
                                 </connections>
@@ -332,6 +334,12 @@
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="gZ5-J5-S3l"/>
+                    <connections>
+                        <outlet property="idTextView" destination="b5b-uK-kDw" id="pvy-kV-3nP"/>
+                        <outlet property="nameTextView" destination="4zz-ho-H96" id="3Wy-OM-iRn"/>
+                        <outlet property="passwordCheckTextView" destination="upe-YO-kRb" id="gbC-Up-Zq0"/>
+                        <outlet property="passwordTextView" destination="hfZ-3S-ptI" id="Mls-vi-w0m"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="6MT-0A-A7C" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -377,6 +385,7 @@
         </scene>
     </scenes>
     <resources>
+        <image name="arrow.forward.circle.fill" catalog="system" width="128" height="121"/>
         <image name="camera.fill" catalog="system" width="128" height="94"/>
         <image name="chunsik_profile" width="225" height="225"/>
         <image name="kakao_logo" width="1000" height="1037"/>
