@@ -16,6 +16,7 @@ class SignUpViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         updateTextView()
+        setTextFieldDelegate()
     }
     
     func updateTextView() {
@@ -26,4 +27,19 @@ class SignUpViewController: UIViewController {
         passwordCheckTextView.updateTitle(title: "비밀번호 재확인")
         nameTextView.updateTitle(title: "이름")
     }
+    
+    func setTextFieldDelegate() {
+        idTextView.textField.delegate = self
+        passwordTextView.textField.delegate = self
+        passwordCheckTextView.textField.delegate = self
+        nameTextView.textField.delegate = self
+    }
+
+}
+
+extension SignUpViewController: UITextFieldDelegate {
+    func textFieldDidBeginEditing(_ textField: UITextField) {
+        print("hi")
+    }
+    
 }

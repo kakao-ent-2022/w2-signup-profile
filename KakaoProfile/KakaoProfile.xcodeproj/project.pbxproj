@@ -19,6 +19,7 @@
 		D43172DE2795375200453B83 /* EditViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D43172DD2795375200453B83 /* EditViewController.swift */; };
 		D43172E027954B0B00453B83 /* ProfileDataDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D43172DF27954B0B00453B83 /* ProfileDataDelegate.swift */; };
 		D45561F62797B4FB00587AA1 /* SignUpTextFieldView.xib in Resources */ = {isa = PBXBuildFile; fileRef = D45561F52797B4FB00587AA1 /* SignUpTextFieldView.xib */; };
+		D45561F82797FEFE00587AA1 /* TextFieldDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D45561F72797FEFE00587AA1 /* TextFieldDelegate.swift */; };
 		D4FA3BA927967C4A00F58EA4 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4FA3BA827967C4A00F58EA4 /* LoginViewController.swift */; };
 		D4FA3BAB27968FAA00F58EA4 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4FA3BAA27968FAA00F58EA4 /* MainViewController.swift */; };
 /* End PBXBuildFile section */
@@ -38,6 +39,7 @@
 		D43172DD2795375200453B83 /* EditViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditViewController.swift; sourceTree = "<group>"; };
 		D43172DF27954B0B00453B83 /* ProfileDataDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileDataDelegate.swift; sourceTree = "<group>"; };
 		D45561F52797B4FB00587AA1 /* SignUpTextFieldView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SignUpTextFieldView.xib; sourceTree = "<group>"; };
+		D45561F72797FEFE00587AA1 /* TextFieldDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextFieldDelegate.swift; sourceTree = "<group>"; };
 		D4FA3BA827967C4A00F58EA4 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		D4FA3BAA27968FAA00F58EA4 /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -83,20 +85,45 @@
 			children = (
 				D4117D3F2795153C005C55A7 /* AppDelegate.swift */,
 				D4117D412795153C005C55A7 /* SceneDelegate.swift */,
-				D4117D432795153C005C55A7 /* ViewController.swift */,
-				D4117D452795153C005C55A7 /* Main.storyboard */,
-				D40D51132797A05900AFB3CD /* SignUpViewController.swift */,
 				D40D51152797A08E00AFB3CD /* View */,
-				D40D510B2797953C00AFB3CD /* TabBarViewController.swift */,
-				D4FA3BA827967C4A00F58EA4 /* LoginViewController.swift */,
-				D43172DD2795375200453B83 /* EditViewController.swift */,
-				D4FA3BAA27968FAA00F58EA4 /* MainViewController.swift */,
-				D43172DF27954B0B00453B83 /* ProfileDataDelegate.swift */,
+				D45561FA2797FFFB00587AA1 /* Controller */,
+				D4117D452795153C005C55A7 /* Main.storyboard */,
 				D4117D482795153D005C55A7 /* Assets.xcassets */,
 				D4117D4A2795153D005C55A7 /* LaunchScreen.storyboard */,
 				D4117D4D2795153D005C55A7 /* Info.plist */,
 			);
 			path = KakaoProfile;
+			sourceTree = "<group>";
+		};
+		D45561F92797FFDF00587AA1 /* SignUp */ = {
+			isa = PBXGroup;
+			children = (
+				D40D51132797A05900AFB3CD /* SignUpViewController.swift */,
+				D45561F72797FEFE00587AA1 /* TextFieldDelegate.swift */,
+			);
+			path = SignUp;
+			sourceTree = "<group>";
+		};
+		D45561FA2797FFFB00587AA1 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				D45561F92797FFDF00587AA1 /* SignUp */,
+				D45561FB2798003A00587AA1 /* Profile */,
+				D40D510B2797953C00AFB3CD /* TabBarViewController.swift */,
+				D4FA3BA827967C4A00F58EA4 /* LoginViewController.swift */,
+				D4FA3BAA27968FAA00F58EA4 /* MainViewController.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		D45561FB2798003A00587AA1 /* Profile */ = {
+			isa = PBXGroup;
+			children = (
+				D4117D432795153C005C55A7 /* ViewController.swift */,
+				D43172DD2795375200453B83 /* EditViewController.swift */,
+				D43172DF27954B0B00453B83 /* ProfileDataDelegate.swift */,
+			);
+			path = Profile;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -175,6 +202,7 @@
 				D4FA3BAB27968FAA00F58EA4 /* MainViewController.swift in Sources */,
 				D4FA3BA927967C4A00F58EA4 /* LoginViewController.swift in Sources */,
 				D43172DE2795375200453B83 /* EditViewController.swift in Sources */,
+				D45561F82797FEFE00587AA1 /* TextFieldDelegate.swift in Sources */,
 				D40D51142797A05900AFB3CD /* SignUpViewController.swift in Sources */,
 				D4117D442795153C005C55A7 /* ViewController.swift in Sources */,
 				D4117D402795153C005C55A7 /* AppDelegate.swift in Sources */,
