@@ -7,6 +7,7 @@
 
 import UIKit
 
+
 class LoginViewController: UIViewController, UINavigationControllerDelegate {
     @IBOutlet var idTextEdit: UITextField!
     @IBOutlet var passwordTextEdit: UITextField!
@@ -50,6 +51,7 @@ class LoginViewController: UIViewController, UINavigationControllerDelegate {
     }
     @IBAction func passwordInputChanged(_ sender: UITextField) {
         clearPasswordButton.isHidden = passwordTextEdit.text?.isEmpty ?? true
+
     }
     
 }
