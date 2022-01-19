@@ -15,6 +15,7 @@
 		EA346D2827965108005DF686 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EA346D2627965108005DF686 /* LaunchScreen.storyboard */; };
 		EA346D3027968FFD005DF686 /* EditViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA346D2F27968FFD005DF686 /* EditViewController.swift */; };
 		EA346D322797D950005DF686 /* EditProfileDataProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA346D312797D950005DF686 /* EditProfileDataProtocol.swift */; };
+		EAF25E852797FD660070CA53 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAF25E842797FD660070CA53 /* LoginViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -28,6 +29,7 @@
 		EA346D2927965108005DF686 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		EA346D2F27968FFD005DF686 /* EditViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditViewController.swift; sourceTree = "<group>"; };
 		EA346D312797D950005DF686 /* EditProfileDataProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditProfileDataProtocol.swift; sourceTree = "<group>"; };
+		EAF25E842797FD660070CA53 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -65,6 +67,7 @@
 				EA346D1F27965107005DF686 /* ProfileViewController.swift */,
 				EA346D2F27968FFD005DF686 /* EditViewController.swift */,
 				EA346D312797D950005DF686 /* EditProfileDataProtocol.swift */,
+				EAF25E842797FD660070CA53 /* LoginViewController.swift */,
 				EA346D2127965107005DF686 /* Main.storyboard */,
 				EA346D2427965108005DF686 /* Assets.xcassets */,
 				EA346D2627965108005DF686 /* LaunchScreen.storyboard */,
@@ -144,6 +147,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EAF25E852797FD660070CA53 /* LoginViewController.swift in Sources */,
 				EA346D3027968FFD005DF686 /* EditViewController.swift in Sources */,
 				EA346D322797D950005DF686 /* EditProfileDataProtocol.swift in Sources */,
 				EA346D2027965107005DF686 /* ProfileViewController.swift in Sources */,
