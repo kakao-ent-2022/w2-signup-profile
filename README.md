@@ -8,11 +8,11 @@
 
 ## :two: 프로필 화면 생성 및 버튼 터치시 Label 속성 변경
 - 시간: 2022.01.17 15:00 (작업 후 작성하여 시간은 임의로 작성했습니다.)
-- [commit Link](https://github.com/nylah-j/w2-signup-profile/tree/91ba21bbbd9ac662305ce9fb02d0fed08ddb42b3)  
-<img width="400" alt="https://media.giphy.com/media/YLdlB6UK7DR8gc2jdN/giphy.gif">
+- [commit link](https://github.com/nylah-j/w2-signup-profile/tree/91ba21bbbd9ac662305ce9fb02d0fed08ddb42b3)  
+<img width="400" src="https://media.giphy.com/media/YLdlB6UK7DR8gc2jdN/giphy.gif">
 
 
 ## :three: 프로필 편집 기능
 - 시간: 2022.01.18 16:51
-- commit:  
-<img width="400" alt="https://media.giphy.com/media/XfxyFRzsKoDizTuvWm/giphy.gif"/>
+- [commit link](https://github.com/nylah-j/w2-signup-profile/tree/73e29229f487b2d980ad15637e3def37e3298fa0)   
+<img width="400" src="https://media.giphy.com/media/XfxyFRzsKoDizTuvWm/giphy.gif"/>
