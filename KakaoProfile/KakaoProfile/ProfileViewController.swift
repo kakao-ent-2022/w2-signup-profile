@@ -33,36 +33,36 @@ class ProfileViewController: UIViewController, EditProfileDataProtocol {
     }
 
     private func initUI() {
+        profileImageView.contentMode = .scaleAspectFill
+
+        nameLabel.font = UIFont.systemFont(ofSize: 24)
+        descriptionLabel.font = UIFont.systemFont(ofSize: 15)
+    
+        nameLabel.textAlignment = .center
+        descriptionLabel.textAlignment = .center
+        
         nameText = "River"
         descriptionText = "카르페 디엠"
-        
+
         setUI()
     }
     
     private func setUI() {
+        profileImageView.image = profileImage
         nameLabel.text = nameText
         descriptionLabel.text = descriptionText
-        
-        nameLabel.font = UIFont.systemFont(ofSize: 24)
-        descriptionLabel.font = UIFont.systemFont(ofSize: 15)
 
         nameLabel.sizeToFit()
         descriptionLabel.sizeToFit()
         
-        nameLabel.textAlignment = .center
-        descriptionLabel.textAlignment = .center
-        
         nameLabel.center.x = view.frame.width / 2
         descriptionLabel.center.x = view.frame.width / 2
-        
-        profileImageView.contentMode = .scaleAspectFill
-        profileImageView.image = profileImage
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if let destination = segue.destination as? EditViewController {
-            destination.nameText = nameLabel.text ?? ""
-            destination.descriptionText = descriptionLabel.text ?? ""
+            destination.nameText = nameLabel.text
+            destination.descriptionText = descriptionLabel.text
             destination.profileImage = profileImageView.image
 
             destination.profileDelegate = self

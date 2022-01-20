@@ -7,6 +7,6 @@
 
 import UIKit
 
-protocol EditProfileDataProtocol: class {
+protocol EditProfileDataProtocol: AnyObject {
     func sendProfileData(nameText: String?, descriptionText: String?, profileImage: UIImage?)
 }
