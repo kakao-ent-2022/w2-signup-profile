@@ -16,6 +16,6 @@ class LoginViewController: UIViewController {
     }
     
     override func shouldPerformSegue(withIdentifier identifier: String, sender: Any?) -> Bool {
-        return self.idTextField.text == "kakao" && self.passwordTextField.text == "kakao" ? true : false
+        return self.idTextField.text == "kakao" && self.passwordTextField.text == "kakao"
     }
 }
