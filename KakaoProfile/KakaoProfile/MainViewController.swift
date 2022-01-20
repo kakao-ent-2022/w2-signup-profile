@@ -17,23 +17,20 @@ class MainViewController : UIViewController, WKUIDelegate {
     
     lazy var webView: WKWebView = {
         let webConfiguration = WKWebViewConfiguration()
-        return WKWebView(frame: .zero, configuration: webConfiguration)
+        return WKWebView(frame: view.frame, configuration: webConfiguration)
     }()
-    
-    override func loadView() {
-        initWebView()
-    }
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        initWebView()
         loadWebViewUrl()
         initUI() 
     }
     
     private func initWebView() {
         webView.uiDelegate = self
-        view = webView
+        view.addSubview(webView)
     }
     
     private func loadWebViewUrl() {
