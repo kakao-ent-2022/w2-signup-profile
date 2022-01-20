@@ -23,7 +23,6 @@ class SignUpViewController: UIViewController {
         updateTextView()
         passCustomViewToTextFieldDelegate()
         setTextFieldDelegate()
-        
     }
     
     private func updateTextView() {
@@ -33,6 +32,8 @@ class SignUpViewController: UIViewController {
         passwordTextView.updatePlaceholder(placeHolder: "영문 대/소문자, 숫자, 특수문자(!@#$%) 8~16자")
         passwordCheckTextView.updateTitle(title: "비밀번호 재확인")
         nameTextView.updateTitle(title: "이름")
+        passwordTextView.textField.isSecureTextEntry = true
+        passwordCheckTextView.textField.isSecureTextEntry = true
     }
     
     private func passCustomViewToTextFieldDelegate() {

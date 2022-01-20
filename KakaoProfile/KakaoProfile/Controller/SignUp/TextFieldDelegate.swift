@@ -25,7 +25,6 @@ class TextFieldDelegate: NSObject, UITextFieldDelegate {
     fileprivate func validate(text: String) -> (Bool, String) {
         return (true, "")
     }
-    
 }
 
 class IDTextFieldDelegate: TextFieldDelegate {
