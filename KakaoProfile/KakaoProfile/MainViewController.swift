@@ -8,9 +8,12 @@
 import UIKit
 import WebKit
 
+enum MainConstant {
+    static let kakaoPageUrl = "https://page.kakao.com"
+    static let navigationTitle = "카카오 페이지"
+}
+
 class MainViewController : UIViewController, WKUIDelegate {
-    
-    let kakaoPageUrl = "https://page.kakao.com"
     
     lazy var webView: WKWebView = {
         let webConfiguration = WKWebViewConfiguration()
@@ -34,14 +37,14 @@ class MainViewController : UIViewController, WKUIDelegate {
     }
     
     private func loadWebViewUrl() {
-        if let myURL = URL(string: kakaoPageUrl) {
+        if let myURL = URL(string: MainConstant.kakaoPageUrl) {
             let myRequest = URLRequest(url: myURL)
             webView.load(myRequest)
         }
     }
     
     private func initUI() {
-        title = "카카오 페이지"
+        navigationItem.title = MainConstant.navigationTitle
     }
     
     override func viewWillAppear(_ animated: Bool) {

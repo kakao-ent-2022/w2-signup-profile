@@ -7,12 +7,14 @@
 
 import UIKit
 
+enum LoginConstant {
+    static let onLoginSuccessSegue = "onLoginSuccess"
+    static let id = "kakao"
+    static let password = "1234"
+}
+
 class LoginViewController: UIViewController {
     
-    let onLoginSuccessSegue = "onLoginSuccess"
-    let id = "kakao"
-    let password = "1234"
-
     @IBOutlet weak var logoImageView: UIImageView!
     @IBOutlet weak var idEditText: UITextField!
     @IBOutlet weak var passwordEditText: UITextField!
@@ -21,8 +23,8 @@ class LoginViewController: UIViewController {
         let idText = idEditText.text
         let passwordText = passwordEditText.text
         
-        if(idText == id && passwordText == password) {
-            self.performSegue(withIdentifier: onLoginSuccessSegue, sender: nil)
+        if(idText == LoginConstant.id && passwordText == LoginConstant.password) {
+            self.performSegue(withIdentifier: LoginConstant.onLoginSuccessSegue, sender: nil)
         }
     }
     

@@ -5,7 +5,6 @@
 //  Created by river.o on 2022/01/19.
 //
 
-import Foundation
 import UIKit
 
 protocol EditProfileDataProtocol: class {
