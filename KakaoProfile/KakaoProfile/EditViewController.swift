@@ -12,6 +12,7 @@ class EditViewController: UIViewController {
     var descriptionText : String?
     var profileDataDelegate: ProfileDataDelegate?
     
+    @IBOutlet weak var profileImage: UIImageView!
     @IBOutlet weak var nameTextField: UITextField!
     @IBOutlet weak var descriptionTextField: UITextField!
     @IBOutlet weak var imageEditButton: UIButton!
@@ -23,8 +24,8 @@ class EditViewController: UIViewController {
     }
     
     func updateUI() {
-        nameTextField.text = nameText ?? ""
-        descriptionTextField.text = descriptionText ?? ""
+        self.nameTextField.text = nameText
+        self.descriptionTextField.text = descriptionText
     }
     
     @IBAction func close(_ sender: Any) {
@@ -32,9 +33,10 @@ class EditViewController: UIViewController {
     }
     
     @IBAction func doneButtonTouched(_ sender: Any) {
-        let name = nameTextField.text ?? ""
-        let description = descriptionTextField.text ?? ""
-        profileDataDelegate?.updateProfile(name: name, description: description)
+        let name = self.nameTextField.text
+        let description = self.descriptionTextField.text
+        let image = self.profileImage.image
+        profileDataDelegate?.updateProfile(name: name, description: description, image: image)
         dismiss(animated: true, completion: nil)
     }
     
@@ -52,9 +54,33 @@ class EditViewController: UIViewController {
         super.viewWillDisappear(animated)
         print(#file, #line, #function, #column)
     }
+    
     override func viewDidDisappear(_ animated: Bool) {
         super.viewDidDisappear(animated)
         print(#file, #line, #function, #column)
     }
 
+    @IBAction func selectImageButtonTouched(_ sender: Any) {
+        let imagePicker = UIImagePickerController()
+        if UIImagePickerController.isSourceTypeAvailable(.savedPhotosAlbum) {
+            imagePicker.delegate = self
+            imagePicker.sourceType = .savedPhotosAlbum
+            imagePicker.allowsEditing = false
+            present(imagePicker, animated: true, completion: nil)
+        }
+    }
 }
+
+extension EditViewController: UIImagePickerControllerDelegate, UINavigationControllerDelegate {
+    func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey : Any]) {
+        guard let image = info[.originalImage] as? UIImage else { return }
+        guard let data = image.jpegData(compressionQuality: 0.1) else { return }
+        self.profileImage.image = UIImage(data: data)
+        dismiss(animated: true)
+    }
+    
+    func imagePickerControllerDidCancel(_ picker: UIImagePickerController) {
+        picker.dismiss(animated: true)
+    }
+}
+

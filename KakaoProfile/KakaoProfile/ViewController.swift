@@ -8,7 +8,6 @@
 import UIKit
 
 class ViewController: UIViewController, ProfileDataDelegate {
-    
     @IBOutlet weak var profileImage: UIImageView!
     @IBOutlet weak var nameLabel: UILabel!
     @IBOutlet weak var descriptionLabel: UILabel!
@@ -35,9 +34,10 @@ class ViewController: UIViewController, ProfileDataDelegate {
         }
     }
     
-    func updateProfile(name: String, description: String) {
+    func updateProfile(name: String?, description: String?, image: UIImage?) {
         self.nameLabel.text = name
         self.descriptionLabel.text = description
+        self.profileImage.image = image
     }
 }
 
