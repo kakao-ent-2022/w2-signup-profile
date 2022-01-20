@@ -9,5 +9,5 @@ import Foundation
 import UIKit
 
 protocol EditProfileDelegate: AnyObject {
-    func sendProfile(profileImage: UIImage, name: String, description: String)
+    func sendProfile(profileImage: UIImage?, name: String?, description: String?)
 }

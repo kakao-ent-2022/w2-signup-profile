@@ -29,25 +29,26 @@ class EditViewController: UIViewController {
         initProfileImageView()
     }
     
-    func initPhotoPickerButton() {
+    private func initPhotoPickerButton() {
         selectImageButton.clipsToBounds = true
         selectImageButton.layer.cornerRadius = 0.5 * selectImageButton.bounds.size.width
         
-        let profileImage = UIImage(named: "good_lion.png")
+        
+        let profileImage = UIImage(named: "good_lion")
         profileImageView.image = profileImage
     }
     
-    func initNameTextField() {
+    private func initNameTextField() {
         nameTextField.clearButtonMode = .whileEditing
         nameTextField.text = nameText
     }
     
-    func initDescriptoinTextField() {
+    private func initDescriptoinTextField() {
         descriptionTextField.clearButtonMode = .whileEditing
         descriptionTextField.text = descriptionText
     }
     
-    func initProfileImageView() {
+    private func initProfileImageView() {
         profileImageView.clipsToBounds = true
         profileImageView.layer.cornerRadius = 0.5 * profileImageView.bounds.size.width
     }
@@ -68,13 +69,12 @@ class EditViewController: UIViewController {
     }
     
     @IBAction func doneButtonTouched(_ sender: Any) {
-        guard let name = nameTextField.text,
-              let description = descriptionTextField.text,
-              let profileImage = profileImageView.image else {
-                    return
-              }
-        
-        delegate?.sendProfile(profileImage: profileImage, name: name, description: description)
+        delegate?.sendProfile(
+            profileImage: profileImageView.image,
+            name: nameTextField.text,
+            description: descriptionTextField.text
+        )
+
         dismiss(animated: true, completion: nil)
     }
     
