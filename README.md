@@ -36,3 +36,10 @@
 - 시간: 2022-01-18 15:28
 - WKWebView를 통해 page.kakao.com페이지가 앱내에서 보이도록 구현
 ![](https://images.velog.io/images/taelee/post/4587f912-d951-40b8-8bb4-ff9bb832dbc6/Jan-18-2022%2015-27-34.gif)
+
+## 6. 회원가입 화면 검증 구현
+- 시간: 2022-01-21 00: 44
+- 텍스트 필드를 xib파일로 나누어서 구현해봤습니다.
+- 각각의 텍스트 필드들의 델리게이트를 만들어서 텍스트필드의 변화를 감지하게 했습니다.
+
+![](https://images.velog.io/images/taelee/post/2a0120d7-2317-4526-b634-ab02773d554d/Simulator%20Screen%20Recording%20-%20iPhone%2013%20Pro%20-%202022-01-21%20at%2000.40.26.gif)
