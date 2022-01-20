@@ -8,18 +8,25 @@
 import UIKit
 
 class SignUpViewController: UIViewController {
-    @IBOutlet weak var idTextView: SignUpTextFieldView!
-    @IBOutlet weak var passwordTextView: SignUpTextFieldView!
-    @IBOutlet weak var passwordCheckTextView: SignUpTextFieldView!
-    @IBOutlet weak var nameTextView: SignUpTextFieldView!
+    @IBOutlet weak var idTextView: CustomTextView!
+    @IBOutlet weak var passwordTextView: CustomTextView!
+    @IBOutlet weak var passwordCheckTextView: CustomTextView!
+    @IBOutlet weak var nameTextView: CustomTextView!
+    
+    var iDTextFieldDelegate = IDTextFieldDelegate()
+    var passwordTextFieldDelegate = PasswordTextFieldDelegate()
+    var passwordCheckTextFieldDelegate = PasswordCheckTextFieldDelegate()
+    var nameTextFieldDelegate = NameTextFieldDelegate()
     
     override func viewDidLoad() {
         super.viewDidLoad()
         updateTextView()
+        passCustomViewToTextFieldDelegate()
         setTextFieldDelegate()
+        
     }
     
-    func updateTextView() {
+    private func updateTextView() {
         idTextView.updateTitle(title: "아이디")
         idTextView.updatePlaceholder(placeHolder: "영문 소문자, 숫자, 특수기호(_,-), 5~20자")
         passwordTextView.updateTitle(title: "비밀번호")
@@ -28,18 +35,18 @@ class SignUpViewController: UIViewController {
         nameTextView.updateTitle(title: "이름")
     }
     
-    func setTextFieldDelegate() {
-        idTextView.textField.delegate = self
-        passwordTextView.textField.delegate = self
-        passwordCheckTextView.textField.delegate = self
-        nameTextView.textField.delegate = self
-    }
-
-}
-
-extension SignUpViewController: UITextFieldDelegate {
-    func textFieldDidBeginEditing(_ textField: UITextField) {
-        print("hi")
+    private func passCustomViewToTextFieldDelegate() {
+        self.iDTextFieldDelegate.textView = idTextView
+        self.passwordTextFieldDelegate.textView = passwordTextView
+        self.passwordCheckTextFieldDelegate.textView = passwordCheckTextView
+        self.passwordCheckTextFieldDelegate.targetTextView = passwordTextView
+        self.nameTextFieldDelegate.textView = nameTextView
     }
     
+    private func setTextFieldDelegate() {
+        idTextView.textField.delegate = self.iDTextFieldDelegate
+        passwordTextView.textField.delegate = self.passwordTextFieldDelegate
+        passwordCheckTextView.textField.delegate = self.passwordCheckTextFieldDelegate
+        nameTextView.textField.delegate = self.nameTextFieldDelegate
+    }
 }

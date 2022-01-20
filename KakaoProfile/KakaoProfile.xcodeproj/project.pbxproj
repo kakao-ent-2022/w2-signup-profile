@@ -8,7 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		D40D510C2797953C00AFB3CD /* TabBarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D40D510B2797953C00AFB3CD /* TabBarViewController.swift */; };
-		D40D511027979F9400AFB3CD /* SignUpTextFieldView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D40D510F27979F9400AFB3CD /* SignUpTextFieldView.swift */; };
+		D40D511027979F9400AFB3CD /* CustomTextView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D40D510F27979F9400AFB3CD /* CustomTextView.swift */; };
 		D40D51142797A05900AFB3CD /* SignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D40D51132797A05900AFB3CD /* SignUpViewController.swift */; };
 		D4117D402795153C005C55A7 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4117D3F2795153C005C55A7 /* AppDelegate.swift */; };
 		D4117D422795153C005C55A7 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4117D412795153C005C55A7 /* SceneDelegate.swift */; };
@@ -18,15 +18,15 @@
 		D4117D4C2795153D005C55A7 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D4117D4A2795153D005C55A7 /* LaunchScreen.storyboard */; };
 		D43172DE2795375200453B83 /* EditViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D43172DD2795375200453B83 /* EditViewController.swift */; };
 		D43172E027954B0B00453B83 /* ProfileDataDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D43172DF27954B0B00453B83 /* ProfileDataDelegate.swift */; };
-		D45561F62797B4FB00587AA1 /* SignUpTextFieldView.xib in Resources */ = {isa = PBXBuildFile; fileRef = D45561F52797B4FB00587AA1 /* SignUpTextFieldView.xib */; };
-		D45561F82797FEFE00587AA1 /* TextFieldDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D45561F72797FEFE00587AA1 /* TextFieldDelegate.swift */; };
+		D45561F62797B4FB00587AA1 /* CustomTextView.xib in Resources */ = {isa = PBXBuildFile; fileRef = D45561F52797B4FB00587AA1 /* CustomTextView.xib */; };
+		D45561FD2798E88400587AA1 /* TextFieldDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D45561FC2798E88400587AA1 /* TextFieldDelegate.swift */; };
 		D4FA3BA927967C4A00F58EA4 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4FA3BA827967C4A00F58EA4 /* LoginViewController.swift */; };
 		D4FA3BAB27968FAA00F58EA4 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4FA3BAA27968FAA00F58EA4 /* MainViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		D40D510B2797953C00AFB3CD /* TabBarViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarViewController.swift; sourceTree = "<group>"; };
-		D40D510F27979F9400AFB3CD /* SignUpTextFieldView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpTextFieldView.swift; sourceTree = "<group>"; };
+		D40D510F27979F9400AFB3CD /* CustomTextView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomTextView.swift; sourceTree = "<group>"; };
 		D40D51132797A05900AFB3CD /* SignUpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpViewController.swift; sourceTree = "<group>"; };
 		D4117D3C2795153C005C55A7 /* KakaoProfile.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = KakaoProfile.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D4117D3F2795153C005C55A7 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -38,8 +38,8 @@
 		D4117D4D2795153D005C55A7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		D43172DD2795375200453B83 /* EditViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditViewController.swift; sourceTree = "<group>"; };
 		D43172DF27954B0B00453B83 /* ProfileDataDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileDataDelegate.swift; sourceTree = "<group>"; };
-		D45561F52797B4FB00587AA1 /* SignUpTextFieldView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SignUpTextFieldView.xib; sourceTree = "<group>"; };
-		D45561F72797FEFE00587AA1 /* TextFieldDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextFieldDelegate.swift; sourceTree = "<group>"; };
+		D45561F52797B4FB00587AA1 /* CustomTextView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CustomTextView.xib; sourceTree = "<group>"; };
+		D45561FC2798E88400587AA1 /* TextFieldDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextFieldDelegate.swift; sourceTree = "<group>"; };
 		D4FA3BA827967C4A00F58EA4 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		D4FA3BAA27968FAA00F58EA4 /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -58,8 +58,8 @@
 		D40D51152797A08E00AFB3CD /* View */ = {
 			isa = PBXGroup;
 			children = (
-				D40D510F27979F9400AFB3CD /* SignUpTextFieldView.swift */,
-				D45561F52797B4FB00587AA1 /* SignUpTextFieldView.xib */,
+				D40D510F27979F9400AFB3CD /* CustomTextView.swift */,
+				D45561F52797B4FB00587AA1 /* CustomTextView.xib */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -99,7 +99,7 @@
 			isa = PBXGroup;
 			children = (
 				D40D51132797A05900AFB3CD /* SignUpViewController.swift */,
-				D45561F72797FEFE00587AA1 /* TextFieldDelegate.swift */,
+				D45561FC2798E88400587AA1 /* TextFieldDelegate.swift */,
 			);
 			path = SignUp;
 			sourceTree = "<group>";
@@ -186,7 +186,7 @@
 			files = (
 				D4117D4C2795153D005C55A7 /* LaunchScreen.storyboard in Resources */,
 				D4117D492795153D005C55A7 /* Assets.xcassets in Resources */,
-				D45561F62797B4FB00587AA1 /* SignUpTextFieldView.xib in Resources */,
+				D45561F62797B4FB00587AA1 /* CustomTextView.xib in Resources */,
 				D4117D472795153C005C55A7 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -202,13 +202,13 @@
 				D4FA3BAB27968FAA00F58EA4 /* MainViewController.swift in Sources */,
 				D4FA3BA927967C4A00F58EA4 /* LoginViewController.swift in Sources */,
 				D43172DE2795375200453B83 /* EditViewController.swift in Sources */,
-				D45561F82797FEFE00587AA1 /* TextFieldDelegate.swift in Sources */,
+				D45561FD2798E88400587AA1 /* TextFieldDelegate.swift in Sources */,
 				D40D51142797A05900AFB3CD /* SignUpViewController.swift in Sources */,
 				D4117D442795153C005C55A7 /* ViewController.swift in Sources */,
 				D4117D402795153C005C55A7 /* AppDelegate.swift in Sources */,
 				D43172E027954B0B00453B83 /* ProfileDataDelegate.swift in Sources */,
 				D4117D422795153C005C55A7 /* SceneDelegate.swift in Sources */,
-				D40D511027979F9400AFB3CD /* SignUpTextFieldView.swift in Sources */,
+				D40D511027979F9400AFB3CD /* CustomTextView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
