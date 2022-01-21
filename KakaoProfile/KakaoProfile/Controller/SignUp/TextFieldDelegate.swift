@@ -16,6 +16,11 @@ class TextFieldDelegate: NSObject, UITextFieldDelegate {
     
     func textFieldDidEndEditing(_ textField: UITextField) {
         guard let text = textField.text else { return }
+        if text == "" {
+            textView?.updateCaption(caption: "")
+            textField.layer.borderColor = UIColor.gray.cgColor
+            return
+        }
         let (isValid, message) = validate(text: text)
         let messageColor = isValid ? UIColor.blue : UIColor.red
         textView?.updateCaption(caption: message, color: messageColor)
