@@ -6,13 +6,8 @@
 //
 
 import UIKit
-protocol TextViewDelegate {
-    func updateTitle(title: String)
-    func updateCaption(caption: String, color: UIColor)
-    func updateTextField(color: CGColor)
-}
 
-class CustomTextView: UIView, TextViewDelegate {
+class CustomTextView: UIView {
     @IBOutlet weak var titleLabel: UILabel!
     @IBOutlet weak var textField: UITextField!
     @IBOutlet weak var captionLabel: UILabel!
