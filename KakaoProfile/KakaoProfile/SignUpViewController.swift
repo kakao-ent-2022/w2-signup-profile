@@ -96,7 +96,8 @@ class SignUpViewController: UIViewController, UITextFieldDelegate {
                 setSignUpInformationLabel(text: signUpInformation, tag: tag, isValidate: true)
             } catch SignUpValidationError.InvaildSignUpText(let errorMessage) {
                 setSignUpInformationLabel(text: errorMessage, tag: tag, isValidate: false)
-            } catch {
+            } catch let error {
+                setSignUpInformationLabel(text: error.localizedDescription, tag: tag, isValidate: false)
             }
         }
     }
