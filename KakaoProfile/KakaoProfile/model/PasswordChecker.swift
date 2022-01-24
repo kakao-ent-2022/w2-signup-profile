@@ -15,29 +15,33 @@ class PasswordChecker {
     private static let numberPattern = "[0-9]"
     private static let specialSymbolPattern = "[!@#$%]"
     
-    static func checkSize(password: String) -> Bool {
+    static func checkSize(password: String?) -> Bool {
+        guard let password = password
+        else {
+            return false
+        }
         return password.count >= passwordMinCount
             && password.count <= passwordMaxCount
     }
     
-    static func checkHasUpper(password: String) -> Bool {
-        guard let _ = password.range(of: uppercasePattern, options: .regularExpression)
+    static func checkHasUpper(password: String?) -> Bool {
+        guard let _ = password?.range(of: uppercasePattern, options: .regularExpression)
         else {
             return false
         }
         return true
     }
     
-    static func checkHasNumber(password: String) -> Bool {
-        guard let _ = password.range(of: numberPattern, options: .regularExpression)
+    static func checkHasNumber(password: String?) -> Bool {
+        guard let _ = password?.range(of: numberPattern, options: .regularExpression)
         else {
             return false
         }
         return true
     }
     
-    static func checkHasSpecialSymbol(password: String) -> Bool {
-        guard let _ = password.range(of: specialSymbolPattern, options: .regularExpression)
+    static func checkHasSpecialSymbol(password: String?) -> Bool {
+        guard let _ = password?.range(of: specialSymbolPattern, options: .regularExpression)
         else {
             return false
         }

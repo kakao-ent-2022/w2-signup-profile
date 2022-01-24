@@ -17,7 +17,7 @@ class UserStorage {
             .set(encodable, forKey: userKey)
     }
     
-    static func get(user: User) -> User? {
+    static func get() -> User? {
         return UserDefaults.standard
             .object(forKey: userKey) as? User
     }
