@@ -13,7 +13,8 @@ class IdChecker {
     private static let idPattern = "^[0-9a-zA-Z_-]*$"
     
     static func checkId(id: String?) -> Bool {
-        guard let id = id else {
+        guard let id = id
+        else {
             return false
         }
         
