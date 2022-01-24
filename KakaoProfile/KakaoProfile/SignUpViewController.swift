@@ -7,6 +7,10 @@
 
 import UIKit
 
+enum SignUpConstant {
+    static let onSignUpSuccessSegue = "onSignUpSuccess"
+}
+
 enum SignUpItem : Int, RawRepresentable {
     case id = 0
     case password = 1
@@ -49,6 +53,10 @@ class SignUpViewController: UIViewController, UITextFieldDelegate {
     private lazy var signUpTextFields = [idTextField, passwordTextField, passwordCheckTextField, nameTextField]
     private lazy var signUpLabels = [idInformationLabel, passwordInformationLabel, passwordCheckInformationLabel, nameInformationLabel]
     
+    @IBAction func selectLoginButtonTouched(_ sender: Any) {
+        signUp()
+    }
+    
     private let signUpValidation = SignUpValidation()
     
     override func viewDidLoad() {
@@ -60,6 +68,15 @@ class SignUpViewController: UIViewController, UITextFieldDelegate {
     private func initUI() {
         idTextField.placeholder = "영문 소문자, 숫자, 특수기호(_,-), 5~20자"
         passwordTextField.placeholder = "영문 대/소문자, 숫자, 특수문자(!@#$%) 8~16자"
+        
+        for textField in signUpTextFields {
+            textField?.returnKeyType = .next
+        }
+        signUpTextFields[signUpTextFields.count - 1]?.returnKeyType = .done
+    }
+    
+    private func signUp() {
+        performSegue(withIdentifier: SignUpConstant.onSignUpSuccessSegue, sender: nil)
     }
     
     func textFieldDidEndEditing(_ textField: UITextField) {
@@ -97,5 +114,17 @@ class SignUpViewController: UIViewController, UITextFieldDelegate {
             label?.textColor = UIColor.red
             textField?.layer.borderColor = UIColor.red.cgColor
         }
+    }
+    
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        let nextTag = textField.tag + 1
+        
+        if nextTag != signUpTextFields.count {
+            signUpTextFields[nextTag]?.becomeFirstResponder()
+        } else {
+            signUp()
+        }
+        
+        return true
     }
 }

@@ -171,6 +171,7 @@
             <objects>
                 <tabBarController automaticallyAdjustsScrollViewInsets="NO" id="JCS-yO-A6t" sceneMemberID="viewController">
                     <toolbarItems/>
+                    <navigationItem key="navigationItem" id="CGP-nl-x0U"/>
                     <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="u6K-96-VzL">
                         <rect key="frame" x="0.0" y="0.0" width="1000" height="1000"/>
                         <autoresizingMask key="autoresizingMask"/>
@@ -418,6 +419,9 @@
                                     <color key="baseForegroundColor" systemColor="linkColor"/>
                                     <color key="baseBackgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </buttonConfiguration>
+                                <connections>
+                                    <action selector="selectLoginButtonTouched:" destination="nlD-As-Wp0" eventType="touchUpInside" id="D7c-LI-f5a"/>
+                                </connections>
                             </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="iph-d8-acD"/>
@@ -432,6 +436,7 @@
                         <outlet property="passwordCheckTextField" destination="RuE-r9-eOY" id="HAy-lS-Xzb"/>
                         <outlet property="passwordInformationLabel" destination="DzO-0U-JXh" id="o03-Ur-TOH"/>
                         <outlet property="passwordTextField" destination="JnE-M2-U0q" id="9zh-yc-hM1"/>
+                        <segue destination="JCS-yO-A6t" kind="presentation" identifier="onSignUpSuccess" modalPresentationStyle="fullScreen" id="ZXW-HO-koz"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="p0o-Oh-tHS" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>

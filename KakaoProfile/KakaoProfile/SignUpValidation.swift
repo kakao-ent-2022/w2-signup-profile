@@ -36,13 +36,13 @@ class SignUpValidation {
         return ""
     }
     
-    func validateRegularExpression(text: String, pattern: String) -> Bool {
+    private func validateRegularExpression(text: String, pattern: String) -> Bool {
         let regex = try? NSRegularExpression(pattern: pattern)
         
         return regex?.firstMatch(in: text, options: [], range: NSRange(location: 0, length: text.count)) != nil
     }
     
-    func validateId(id: String) throws -> String {
+    private func validateId(id: String) throws -> String {
         if validateRegularExpression(text: id, pattern: ValidationType.id) {
             return "사용 가능한 아이디입니다."
         } else {
@@ -50,7 +50,7 @@ class SignUpValidation {
         }
     }
     
-    func validatePassword(password: String) throws -> String {
+    private func validatePassword(password: String) throws -> String {
         if validateRegularExpression(text: password, pattern: ValidationType.password) {
             return "안전한 비밀번호입니다."
         } else {
@@ -69,7 +69,7 @@ class SignUpValidation {
         }
     }
     
-    func checkPassword(originPassword: String, checkPassword: String) throws -> String {
+    private func checkPassword(originPassword: String, checkPassword: String) throws -> String {
         if originPassword == checkPassword {
             return "비밀번호가 일치합니다."
         } else {
@@ -77,7 +77,7 @@ class SignUpValidation {
         }
     }
     
-    func validateName(name: String) throws -> String {
+    private func validateName(name: String) throws -> String {
         if !name.isEmpty {
             return "사용 가능한 이름입니다."
         } else {
