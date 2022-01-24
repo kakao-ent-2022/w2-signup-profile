@@ -8,7 +8,7 @@
 import UIKit
 
 class ViewController: UIViewController, EditProfileDelegate {
-
+    
     @IBOutlet weak var profileImageView: UIImageView!
     @IBOutlet weak var nameLable: UILabel!
     @IBOutlet weak var descriptionLabel: UILabel!
@@ -23,11 +23,11 @@ class ViewController: UIViewController, EditProfileDelegate {
         initProfileImage()
     }
     
-    func initRoot() {
+    private func initRoot() {
         view.backgroundColor = UIColor.init(red: 133 / 255.0, green: 147 / 255.0, blue: 153 / 255.0, alpha: 1)
     }
     
-    func initNameLabel() {
+    private func initNameLabel() {
         nameLable.text = "JK"
         nameLable.textColor = UIColor.cyan
         nameLable.font = self.nameLable.font.withSize(25)
@@ -35,14 +35,14 @@ class ViewController: UIViewController, EditProfileDelegate {
         nameLable.textAlignment = NSTextAlignment.center
     }
     
-    func initDescriptionLabel() {
+    private func initDescriptionLabel() {
         descriptionLabel.text = "카르페 디엠"
         descriptionLabel.textColor = UIColor.brown
         descriptionLabel.backgroundColor = UIColor.darkGray
         descriptionLabel.textAlignment = NSTextAlignment.center
     }
     
-    func initProfileImage() {
+    private func initProfileImage() {
         profileImageView.clipsToBounds = true
         profileImageView.layer.cornerRadius = 0.5 * self.profileImageView.bounds.width
         profileImageView.image = UIImage(named: "good_lion.png")
@@ -63,7 +63,7 @@ class ViewController: UIViewController, EditProfileDelegate {
         }
     }
     
-    func sendProfile(profileImage: UIImage, name: String, description: String) {
+    func sendProfile(profileImage: UIImage?, name: String?, description: String?) {
         nameLable.text = name
         descriptionLabel.text = description
         profileImageView.image = profileImage
