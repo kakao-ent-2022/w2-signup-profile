@@ -17,8 +17,8 @@ class EditViewController: UIViewController {
 
     weak var profileDelegate: EditProfileDataProtocol?
     
-    @IBOutlet weak var nameEditText: UITextField!
-    @IBOutlet weak var descriptionEditText: UITextField!
+    @IBOutlet weak var nameTextField: UITextField!
+    @IBOutlet weak var descriptionTextField: UITextField!
     @IBOutlet weak var profileImageView: UIImageView!
     
     @IBAction func selectCancleButtonTouched(_ sender: Any) {
@@ -35,7 +35,7 @@ class EditViewController: UIViewController {
     }
     
     @IBAction func selectDoneButtonTouched(_ sender: Any) {
-        profileDelegate?.sendProfileData(nameText: nameEditText.text, descriptionText: descriptionEditText.text, profileImage: profileImage)
+        profileDelegate?.sendProfileData(nameText: nameTextField.text, descriptionText: descriptionTextField.text, profileImage: profileImage)
         close()
     }
     
@@ -46,8 +46,8 @@ class EditViewController: UIViewController {
     }
     
     private func initUI() {
-        nameEditText.text = nameText
-        descriptionEditText.text = descriptionText
+        nameTextField.text = nameText
+        descriptionTextField.text = descriptionText
         
         profileImageView.contentMode = .scaleAspectFill
         if profileImage != nil {

@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		EA09B472279A4F5200511ECF /* SignUpValidation.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA09B471279A4F5200511ECF /* SignUpValidation.swift */; };
 		EA346D1C27965107005DF686 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA346D1B27965107005DF686 /* AppDelegate.swift */; };
 		EA346D1E27965107005DF686 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA346D1D27965107005DF686 /* SceneDelegate.swift */; };
 		EA346D2027965107005DF686 /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA346D1F27965107005DF686 /* ProfileViewController.swift */; };
@@ -15,11 +16,13 @@
 		EA346D2827965108005DF686 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EA346D2627965108005DF686 /* LaunchScreen.storyboard */; };
 		EA346D3027968FFD005DF686 /* EditViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA346D2F27968FFD005DF686 /* EditViewController.swift */; };
 		EA346D322797D950005DF686 /* EditProfileDataProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA346D312797D950005DF686 /* EditProfileDataProtocol.swift */; };
+		EA9670B82799AF7200F3003D /* SignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA9670B72799AF7200F3003D /* SignUpViewController.swift */; };
 		EAF25E852797FD660070CA53 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAF25E842797FD660070CA53 /* LoginViewController.swift */; };
 		EAF25E8727980BAE0070CA53 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAF25E8627980BAE0070CA53 /* MainViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		EA09B471279A4F5200511ECF /* SignUpValidation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpValidation.swift; sourceTree = "<group>"; };
 		EA346D1827965107005DF686 /* KakaoProfile.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = KakaoProfile.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		EA346D1B27965107005DF686 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		EA346D1D27965107005DF686 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -30,6 +33,7 @@
 		EA346D2927965108005DF686 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		EA346D2F27968FFD005DF686 /* EditViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditViewController.swift; sourceTree = "<group>"; };
 		EA346D312797D950005DF686 /* EditProfileDataProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditProfileDataProtocol.swift; sourceTree = "<group>"; };
+		EA9670B72799AF7200F3003D /* SignUpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpViewController.swift; sourceTree = "<group>"; };
 		EAF25E842797FD660070CA53 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		EAF25E8627980BAE0070CA53 /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -71,6 +75,8 @@
 				EA346D312797D950005DF686 /* EditProfileDataProtocol.swift */,
 				EAF25E842797FD660070CA53 /* LoginViewController.swift */,
 				EAF25E8627980BAE0070CA53 /* MainViewController.swift */,
+				EA9670B72799AF7200F3003D /* SignUpViewController.swift */,
+				EA09B471279A4F5200511ECF /* SignUpValidation.swift */,
 				EA346D2127965107005DF686 /* Main.storyboard */,
 				EA346D2427965108005DF686 /* Assets.xcassets */,
 				EA346D2627965108005DF686 /* LaunchScreen.storyboard */,
@@ -152,10 +158,12 @@
 			files = (
 				EAF25E8727980BAE0070CA53 /* MainViewController.swift in Sources */,
 				EAF25E852797FD660070CA53 /* LoginViewController.swift in Sources */,
+				EA9670B82799AF7200F3003D /* SignUpViewController.swift in Sources */,
 				EA346D3027968FFD005DF686 /* EditViewController.swift in Sources */,
 				EA346D322797D950005DF686 /* EditProfileDataProtocol.swift in Sources */,
 				EA346D2027965107005DF686 /* ProfileViewController.swift in Sources */,
 				EA346D1C27965107005DF686 /* AppDelegate.swift in Sources */,
+				EA09B472279A4F5200511ECF /* SignUpValidation.swift in Sources */,
 				EA346D1E27965107005DF686 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

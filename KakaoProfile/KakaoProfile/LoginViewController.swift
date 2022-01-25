@@ -19,12 +19,12 @@ enum LoginConstant {
 class LoginViewController: UIViewController {
     
     @IBOutlet weak var logoImageView: UIImageView!
-    @IBOutlet weak var idEditText: UITextField!
-    @IBOutlet weak var passwordEditText: UITextField!
+    @IBOutlet weak var idTextField: UITextField!
+    @IBOutlet weak var passwordTextField: UITextField!
     
     @IBAction func selectLoginButtonTouched(_ sender: Any) {
-        let idText = idEditText.text
-        let passwordText = passwordEditText.text
+        let idText = idTextField.text
+        let passwordText = passwordTextField.text
         
         if(idText == LoginConstant.id && passwordText == LoginConstant.password) {
             self.performSegue(withIdentifier: LoginConstant.onLoginSuccessSegue, sender: nil)
